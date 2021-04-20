@@ -14,6 +14,7 @@ export default StyleSheet.create({
     },
     txtP:{
         fontSize: 18,
+        fontWeight: "bold",
         color: '#544F1F',
         marginBottom:20,
     },
