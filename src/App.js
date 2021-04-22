@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Estilo from './components/estilo'; 
-import {View, SafeAreaView,StyleSheet, TextInput,Text,TouchableOpacity,Image} from 'react-native';
+import {View, SafeAreaView,StyleSheet,Text,TouchableOpacity,Image} from 'react-native';
 //verificar imports redundantes
 import GlobalStyles from './components/GlobalStyles';
 import FormLogin from './components/FormLogin';
@@ -8,14 +8,17 @@ import FormLogin from './components/FormLogin';
 export default () => {
   const [login,onChangeText] = useState("");
   return(
-    // Tag safeareaview para nao ficar atras do notch
-    <SafeAreaView style={[style.App, GlobalStyles.AndroidSafeArea]}>
+    // Tag safeareaview não funcionou sem o estilo
+    <SafeAreaView style={[ GlobalStyles.AndroidSafeArea]}> 
+      {/* Padding na area total do app*/}
+      <View style={[style.App,padding(20)]}>  
 
-      <View style={padding(20)}>
-
-        <Image source={require('./img/bevegan-logo.png')}
-        style={style.img} 
-        />
+        <View style={style.imgView}>
+          <Image source={require('./img/bevegan-logo.png')}
+          style={style.img} 
+          />
+        </View>
+          
 
         {/* Componente do formulario login, feito em arquivo separado */}
         <FormLogin/>
@@ -46,12 +49,13 @@ const style = StyleSheet.create({
     color:'#544F1F'
   },
   img:{
-    marginLeft:50,
     marginBottom:50,
     width: 250, height: 210
+  },
+  imgView:{
+    alignItems:"center",
   }
   
-
 })
 
 function padding(a, b, c, d) {
@@ -60,7 +64,6 @@ function padding(a, b, c, d) {
     paddingRight: b ? b : a,
     paddingBottom: c ? c : a,
     paddingLeft: d ? d : (b ? b : a)
-    
   }
 }
 

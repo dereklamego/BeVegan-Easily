@@ -5,9 +5,14 @@ import Estilo from './estilo'
 export default () => {
     const [login,onChangeText] = useState("");
     return(
+        
         <View style={style.Container}>
             {/* <Text style={Estilo.txtG}>Cadastre-se</Text> */}
-            <TextInput style={style.Input} onChangeText={onChangeText} value={login} placeholder="Login"/>
+            <TextInput style={style.Input}
+             onChangeText={onChangeText}
+             value={login}
+             placeholder="Login"
+            />
 
             <TextInput
             style={style.Input}
