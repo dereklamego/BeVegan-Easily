@@ -1,21 +1,21 @@
 import React, {useState} from 'react';
 import Estilo from './components/estilo'; 
-import {View, SafeAreaView,StyleSheet,Text,TouchableOpacity,Image} from 'react-native';
+import FormLogin from './components/FormLogin';
 //verificar imports redundantes
 import GlobalStyles from './components/GlobalStyles';
-import FormLogin from './components/FormLogin';
+import {View, SafeAreaView,StyleSheet,Text,TouchableOpacity,Image} from 'react-native';
 
 export default () => {
   const [login,onChangeText] = useState("");
   return(
     // Tag safeareaview não funcionou sem o estilo
-    <SafeAreaView style={[ GlobalStyles.AndroidSafeArea]}> 
+    <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}> 
       {/* Padding na area total do app*/}
-      <View style={[style.App,padding(20)]}>  
+      <View style={[padding(20)]}>  
 
-        <View style={style.imgView}>
+        <View style={Estilo.imgView}>
           <Image source={require('./img/bevegan-logo.png')}
-          style={style.img} 
+          style={Estilo.img} 
           />
         </View>
           
@@ -40,24 +40,6 @@ export default () => {
     
 } 
   
-const style = StyleSheet.create({
-
-  App:{
-    flexGrow: 1,
-    backgroundColor: '#75D221',
-    justifyContent: 'center',
-    color:'#544F1F'
-  },
-  img:{
-    marginBottom:50,
-    width: 250, height: 210
-  },
-  imgView:{
-    alignItems:"center",
-  }
-  
-})
-
 function padding(a, b, c, d) {
   return {
     paddingTop: a,

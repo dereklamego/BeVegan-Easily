@@ -7,11 +7,17 @@ export default () => {
     return(
         
         <View style={Estilo.Container}>
-            
+            <Text style={Estilo.txtM}>Cadastre-se</Text>
             <TextInput style={Estilo.Input}
              onChangeText={onChangeText}
-             value={login}
-             placeholder="Login"
+             value={nome}
+             placeholder="Nome"
+            />
+
+            <TextInput style={Estilo.Input}
+             onChangeText={onChangeText}
+             value={email}
+             placeholder="Email"
             />
 
             <TextInput
@@ -19,10 +25,12 @@ export default () => {
             placeholder="Senha"
             secureTextEntry={true}
             />
+
+            <TextInput style={Estilo.Input}
+             onChangeText={onChangeText}
+             placeholder="Confirme sua senha"
+             secureTextEntry={true}
+            />
         </View>
-       
     )
 }
-      
-    
-  
