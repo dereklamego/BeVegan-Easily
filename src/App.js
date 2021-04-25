@@ -1,44 +1,25 @@
 import React, {useState} from 'react';
 import Estilo from './components/estilo'; 
-import FormLogin from './components/FormLogin';
 //verificar imports redundantes
 import GlobalStyles from './components/GlobalStyles';
-import {View, SafeAreaView,StyleSheet,Text,TouchableOpacity,Image} from 'react-native';
+import {View, SafeAreaView} from 'react-native';
+import RegisterScreen from './views/RegisterScreen';
+import LoginScreen from './views/LoginScreen'
 
-export default () => {
-  const [login,onChangeText] = useState("");
-  return(
-    // Tag safeareaview não funcionou sem o estilo
-    <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}> 
-      {/* Padding na area total do app*/}
-      <View style={[padding(20)]}>  
+export default props => (
+  
+  // Tag safeareaview não funcionou sem o estilo AndroidSafeArea
+  <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}> 
+    {/* Padding na area total do app*/}
+    <View style={[padding(20)]}>  
 
-        <View style={Estilo.imgView}>
-          <Image source={require('./img/bevegan-logo.png')}
-          style={Estilo.img} 
-          />
-        </View>
-          
+      <RegisterScreen/>
+      <LoginScreen/>
 
-        {/* Componente do formulario login, feito em arquivo separado */}
-        <FormLogin/>
-        
-        {/* Usando o TouchableOpacity no lugar do button, o button nao aceita estilização na stylesheet */}
-
-        <View style={Estilo.BtnContainer}>
-            <TouchableOpacity style={[Estilo.btnEnter]} title="Entrar">
-              <Text style={Estilo.txtBtnG}>Entrar</Text>
-            </TouchableOpacity>
-            <Text style={[Estilo.txtP,{textDecorationLine: 'underline'}]}> Esqueceu a senha?</Text>
-            <Text style={[Estilo.txtP,{textDecorationLine: 'underline'}]}>Cadastre-se</Text>
-        </View>  
-
-      </View>
-
-    </SafeAreaView>
-  )
-    
-} 
+    </View>
+  </SafeAreaView>
+  
+)
   
 function padding(a, b, c, d) {
   return {

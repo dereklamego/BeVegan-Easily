@@ -8,29 +8,39 @@ export default () => {
         
         <View style={Estilo.Container}>
             <Text style={Estilo.txtM}>Cadastre-se</Text>
-            <TextInput style={Estilo.Input}
+            <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
-             value={nome}
+             value={""}
              placeholder="Nome"
             />
 
-            <TextInput style={Estilo.Input}
+            <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
-             value={email}
+             value={""}
              placeholder="Email"
             />
 
             <TextInput
-            style={Estilo.Input}
+            style={[Estilo.Input, EstiloLocal.Input]}
             placeholder="Senha"
             secureTextEntry={true}
             />
 
-            <TextInput style={Estilo.Input}
+            <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
              placeholder="Confirme sua senha"
              secureTextEntry={true}
             />
         </View>
     )
+
+
+   
 }
+
+const EstiloLocal = StyleSheet.create({
+    Input:{
+        marginBottom: 10,
+        marginTop: 15
+    }
+})

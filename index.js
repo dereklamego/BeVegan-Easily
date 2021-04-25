@@ -1,5 +1,5 @@
 import registerRootComponent from 'expo/build/launch/registerRootComponent';
 
-import App from './src/App.js';
+import IndexRoute from './src/routes'
 
-registerRootComponent(App);
+registerRootComponent(IndexRoute);

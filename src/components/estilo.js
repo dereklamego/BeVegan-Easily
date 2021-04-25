@@ -11,6 +11,7 @@ export default StyleSheet.create({
     txtM:{
         fontSize: 24,
         textAlign: 'center',
+        fontWeight: "bold",
         color: '#544F1F'
     },
     txtP:{
@@ -33,7 +34,36 @@ export default StyleSheet.create({
         backgroundColor:'#544F1F',
         width:"30%",
         height:40,
-        borderRadius:5
+        borderRadius:5,
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    },
+    
+    btnCadastrar:{
+        marginTop:20, 
+        marginBottom:20,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#544F1F',
+        width:"35%",
+        height:40,
+        borderRadius:5,
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
     },
 
     txtBtnG:{
