@@ -21,6 +21,15 @@ export default StyleSheet.create({
         marginBottom:20,
     },
 
+    //codigo acima duplicado
+    txtBack:{
+        fontSize: 18,
+        fontWeight: "bold",
+        color: 'white',
+        marginBottom:20,
+        marginRight: '80%',
+    },
+
     //Estilo para botões
     BtnContainer:{
         alignItems:'center'
@@ -54,6 +63,27 @@ export default StyleSheet.create({
         backgroundColor:'#544F1F',
         width:"35%",
         height:40,
+        borderRadius:5,
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    },
+
+    //codigo acima duplicado
+    btnDuvidoso:{
+        marginTop:20, 
+        marginBottom:20,
+        justifyContent:'center',
+        alignItems:'center',
+        backgroundColor:'#544F1F',
+        width:"70%",
+        height:35,
         borderRadius:5,
         shadowColor: "#000",
         shadowOffset: {
@@ -113,6 +143,15 @@ export default StyleSheet.create({
         shadowRadius: 4.65,
 
         elevation: 6,
+    },
+    
+    //padrão padding para os botões de voltar
+    HeadColor: {
+        padding: 5,
+        backgroundColor: "#544F1F",
+        alignItems: 'left',
+
     }
    
 })
+
