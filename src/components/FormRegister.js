@@ -4,19 +4,20 @@ import Estilo from './estilo'
 
 export default () => {
     const [login,onChangeText] = useState("");
+    
     return(
         
         <View style={Estilo.Container}>
             <Text style={Estilo.txtM}>Cadastre-se</Text>
             <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
-             value={""}
+            
              placeholder="Nome"
             />
 
             <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
-             value={""}
+             
              placeholder="Email"
             />
 
