@@ -31,7 +31,7 @@ export default ({navigation}) => {
                 
                 <View style={Estilo.BtnContainer}> 
                 {/* Usando o TouchableOpacity no lugar do button, o button nao aceita estilização na stylesheet no android */}
-                    <TouchableOpacity style={[Estilo.btnEnter]} title="Entrar">
+                    <TouchableOpacity onPress={() => navigation.navigate('principal')} style={[Estilo.btnEnter]} title="Entrar">
                         <Text style={Estilo.txtBtnG}>Entrar</Text>
                     </TouchableOpacity>
 

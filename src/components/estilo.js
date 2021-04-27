@@ -26,8 +26,9 @@ export default StyleSheet.create({
         fontSize: 18,
         fontWeight: "bold",
         color: 'white',
-        marginBottom:20,
-        marginRight: '80%',
+        marginRight:'25%',
+        marginBottom: 5,
+
     },
 
     //Estilo para botões
@@ -110,6 +111,12 @@ export default StyleSheet.create({
         color:'#544F1F'
     },
 
+    AppPrincipal:{
+        flexGrow: 1,
+        backgroundColor: '#75D221',
+        color:'#544F1F'
+    },
+
     //Estilo para o logo 
     img:{
         marginBottom:50,
@@ -147,10 +154,12 @@ export default StyleSheet.create({
     
     //padrão padding para os botões de voltar
     HeadColor: {
-        padding: 5,
+        padding: 1,
         backgroundColor: "#544F1F",
-        alignItems: 'left',
-
+        
+    },
+    HeadAlign:{
+        marginTop: 5
     }
    
 })
