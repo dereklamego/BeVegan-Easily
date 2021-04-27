@@ -154,12 +154,12 @@ export default StyleSheet.create({
     
     //padrão padding para os botões de voltar
     HeadColor: {
-        padding: 1,
+       
+        padding: 5,
         backgroundColor: "#544F1F",
-        
-    },
-    HeadAlign:{
-        marginTop: 5
+        // alignItems:'left',
+        width: '100%',
+         
     }
    
 })
