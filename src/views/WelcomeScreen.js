@@ -10,11 +10,11 @@ export default ({navigation}) => {
             <View style={[Estilo.HeadColor]}>
                     <TouchableOpacity >
                             <Text onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Sair</Text>
-
                     </TouchableOpacity> 
             </View>
 
             <View style={[Estilo.App,padding(20)]}>
+
                 <View style={[Estilo.imgView, EstiloLocal.imgView]}>
                     <Image source={require('../img/bevegan-logo.png')}
                     style={Estilo.img} 

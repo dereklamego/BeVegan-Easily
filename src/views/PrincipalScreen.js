@@ -17,9 +17,9 @@ export default ({navigation}) => {
                 </View>
                 {/*View abaixo contem os botões que irão indicar para as principais funcionalidades do app */}
                 <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
-                    <TouchableOpacity style={EstiloLocal.Btn}>Receitas</TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}>Enconte produtos veganos</TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}>Saiba mais sobre o veganismo</TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Receitas</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Enconte produtos veganos</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Saiba mais sobre o veganismo</Text></TouchableOpacity>
                 </View>
        
             </View>
