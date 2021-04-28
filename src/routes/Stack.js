@@ -6,6 +6,8 @@ import WelcomeScreen from '../views/WelcomeScreen'
 import PrincipalScreen from '../views/PrincipalScreen'
 import VeganScreen from '../views/VeganScreen'
 import MapScreen from '../views/MapScreen'
+import LearnMoreScreen from '../views/LearnMoreScreen'
+import RecipesScreen from '../views/RecipesScreen'
 import { SafeAreaView,Text} from 'react-native'
 
 
@@ -21,7 +23,8 @@ export default props => (
             <Stack.Screen name="principal" component={PrincipalScreen}/>
             <Stack.Screen name="vegan" component={VeganScreen}/>
             <Stack.Screen name="map" component={MapScreen}/>
-
+            <Stack.Screen name='learn' component={LearnMoreScreen}/>
+            <Stack.Screen name='recipes' component={RecipesScreen}/>
         </Stack.Navigator>
     </SafeAreaView>    
     

@@ -8,7 +8,7 @@ export default ({navigation}) => {
 
         <SafeAreaView style={[GlobalStyles.AndroidSafeArea,{backgroundColor: '#75D221'}]}>
             <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity >
+                    <TouchableOpacity style={{flexDirection:'row'}} >
                             <Text onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Sair</Text>
                     </TouchableOpacity> 
             </View>

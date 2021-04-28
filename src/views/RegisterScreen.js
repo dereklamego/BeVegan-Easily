@@ -11,8 +11,8 @@ export default ({navigation}) =>{
         <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}>
             <View style={padding(20)}>
                 <View>
-                <TouchableOpacity>
-                        <Text onPress={() => navigation.goBack()} style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                <TouchableOpacity style={{flexDirection:'row'}}>
+                        <Text onPress={() => navigation.goBack()} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
                     </TouchableOpacity> 
                 </View>
                 <View style={[Estilo.imgView, EstiloLocal.imgView]}>
@@ -24,8 +24,8 @@ export default ({navigation}) =>{
                 <FormRegister/>
                 
                 <View style={Estilo.BtnContainer}>
-                    <TouchableOpacity onPress={() => navigation.navigate('welcome')} style={[Estilo.btnCadastrar]} title="Entrar">
-                        <Text style={[Estilo.txtBtnG]}>Cadastrar</Text>
+                    <TouchableOpacity  style={[Estilo.btnCadastrar]} title="Entrar">
+                        <Text style={[Estilo.txtBtnG]} onPress={() => navigation.navigate('welcome')}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
             </View>  
