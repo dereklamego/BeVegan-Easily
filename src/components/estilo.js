@@ -27,7 +27,7 @@ export default StyleSheet.create({
         fontSize: 18,
         fontWeight: "bold",
         color: 'white',
-        // marginRight:'25%',
+        //marginRight:'25%',
         marginBottom: 5,
         textDecorationLine: 'underline'
     },
@@ -104,6 +104,15 @@ export default StyleSheet.create({
         color: '#fff'
     },
 
+    txtBtn:{
+        fontSize: 24,
+        textAlign: "center",
+        color: "rgb(84, 79, 31)",
+        fontWeight: "bold",
+        
+
+    },
+
     //Estilo padrão de telas 
     App:{
         flexGrow: 1,
@@ -156,20 +165,23 @@ export default StyleSheet.create({
     //padrão padding para os botões de voltar
     HeadColor: {
         height: 50,
-        padding: 5,
         backgroundColor: "#544F1F",
         // alignItems:'left',
-        width: '100%',   
+        width: '100%',
+        justifyContent: "center",
+        alignItems: "center"   
     },
 
     HeadAlign: {
-        fontSize: 20,
-        alignItems: "center",
-        color: '#fff',
-
-
-
-
+        width: '100%',
+        fontSize: 18,
+        fontWeight: "bold",
+        color: 'white',
+        marginRight:'auto',
+        marginLeft: 'auto',
+        marginBottom: 5,
+        textDecorationLine: 'underline',
+             
 
     },
 

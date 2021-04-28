@@ -56,7 +56,7 @@ const EstiloLocal = StyleSheet.create({
             flex:1,
             // flexDirection: 'column-reverse',
             justifyContent: 'space-evenly',
-             top: "-4%",
+             //top: "-4%",
         },
     
 })

@@ -10,10 +10,10 @@ export default ({navigation}) => {
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/* <View style={{flex:1}}> */}
                 {/*view abaixo contém header e botão de volta */}
-                <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack,{flexDirection:'row'}]} >
+                <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack]} >
                         <Text  style={[ Estilo.txtBack,{textDecorationLine: 'underline'}] }>Sair</Text>
-                       
+                        
                     </TouchableOpacity> 
                     <Text style={[Estilo.HeadAlign]}>Pagina inicial</Text >
                 </View>
@@ -21,11 +21,11 @@ export default ({navigation}) => {
         
                 <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
                     
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('recipes')}><Text>Receitas</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('map')}><Text>Enconte produtos veganos</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('learn')}><Text>Saiba mais sobre o veganismo</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('recipes')}><Text style = {[Estilo.txtBtn]}>Receitas</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('map')}><Text style = {[Estilo.txtBtn]}>Enconte produtos veganos</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('learn')}><Text style = {[Estilo.txtBtn]}>Saiba mais sobre o veganismo</Text></TouchableOpacity>
                     {/*usando pagina ajuda para testar o botão continuar da pagina sobre veganismo */}
-                    <TouchableOpacity style={EstiloLocal.Btn}onPress={() => navigation.navigate('vegan')}><Text>Ajuda</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn}onPress={() => navigation.navigate('vegan')}><Text style = {[Estilo.txtBtn]}>Ajuda</Text></TouchableOpacity>
                     
                 </View>
             {/* </View> */}
@@ -63,7 +63,7 @@ const EstiloLocal = StyleSheet.create({
             flex:1,
             // flexDirection: 'column-reverse',
             justifyContent: 'space-evenly',
-             top: "-4%",
+             //top: "-4%",
         },
     
 })

@@ -7,7 +7,7 @@ import RegisterScreen from '../views/RegisterScreen';
 import { useNavigation } from '@react-navigation/core';
 
 export default ({navigation}) => {
-
+    
     //o que isso faz?
     const [login,onChangeText] = useState("");
   

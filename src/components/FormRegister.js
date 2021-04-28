@@ -14,7 +14,7 @@ export default () => {
             
              placeholder="Nome"
             />
-
+ 
             <TextInput style={[Estilo.Input, EstiloLocal.Input]}
              onChangeText={onChangeText}
              
