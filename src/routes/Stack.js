@@ -4,6 +4,8 @@ import LoginScreen from '../views/LoginScreen'
 import RegisterScreen from '../views/RegisterScreen'
 import WelcomeScreen from '../views/WelcomeScreen'
 import PrincipalScreen from '../views/PrincipalScreen'
+import VeganScreen from '../views/VeganScreen'
+import MapScreen from '../views/MapScreen'
 import { SafeAreaView,Text} from 'react-native'
 
 
@@ -17,6 +19,9 @@ export default props => (
             <Stack.Screen name="cadastro" component={RegisterScreen}/>
             <Stack.Screen name="welcome" component={WelcomeScreen}/>
             <Stack.Screen name="principal" component={PrincipalScreen}/>
+            <Stack.Screen name="vegan" component={VeganScreen}/>
+            <Stack.Screen name="map" component={MapScreen}/>
+
         </Stack.Navigator>
     </SafeAreaView>    
     

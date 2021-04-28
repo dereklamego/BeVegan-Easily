@@ -20,7 +20,7 @@ export default ({navigation}) => {
         
                 <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
                     <TouchableOpacity style={EstiloLocal.Btn}><Text>Receitas</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Enconte produtos veganos</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('map')}><Text>Enconte produtos veganos</Text></TouchableOpacity>
 
                     <TouchableOpacity style={EstiloLocal.Btn}><Text>Saiba mais sobre o veganismo</Text></TouchableOpacity>
                     <TouchableOpacity style={EstiloLocal.Btn}><Text>Ajuda</Text></TouchableOpacity>
