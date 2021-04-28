@@ -11,7 +11,7 @@ export default ({navigation}) => {
             <View style={[Estilo.HeadColor]}>
                     <TouchableOpacity style={{flexDirection:'row'}} >
                         <Text onPress={() => navigation.goBack()} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                        <Text style={[Estilo.HeadAlign, Estilo.txtBack]}>Saiba mais sobre o veganismo</Text >
+                        <Text style={[Estilo.HeadAlign, Estilo.txtBack]}>Receitas</Text >
                     </TouchableOpacity> 
                     </View>
                     {/*Footer da pagina */}

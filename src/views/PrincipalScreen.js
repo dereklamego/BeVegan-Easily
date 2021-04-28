@@ -23,7 +23,8 @@ export default ({navigation}) => {
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('recipes')}><Text>Receitas</Text></TouchableOpacity>
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('map')}><Text>Enconte produtos veganos</Text></TouchableOpacity>
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('learn')}><Text>Saiba mais sobre o veganismo</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Ajuda</Text></TouchableOpacity>
+                    {/*usando pagina ajuda para testar o botão continuar da pagina sobre veganismo */}
+                    <TouchableOpacity style={EstiloLocal.Btn}onPress={() => navigation.navigate('vegan')}><Text>Ajuda</Text></TouchableOpacity>
                     
                 </View>
             {/* </View> */}

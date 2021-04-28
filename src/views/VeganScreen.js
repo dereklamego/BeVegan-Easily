@@ -15,7 +15,9 @@ export default ({navigation}) => {
                     </TouchableOpacity> 
                     </View>
                     {/*Botão da pagina */}
-                    <View style={Estilo.btnDuvidoso}>Continuar</View>
+                    <TouchableOpacity style={[Estilo.btnDuvidoso]} title="Entrar">
+                        <Text style={[Estilo.txtBtnG]}>Continuar</Text>
+                    </TouchableOpacity>
         </SafeAreaView>
     )
 }
