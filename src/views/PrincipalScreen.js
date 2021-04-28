@@ -11,10 +11,11 @@ export default ({navigation}) => {
             {/* <View style={{flex:1}}> */}
                 {/*view abaixo contém header e botão de volta */}
                 <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity style={{flexDirection:'row'}} >
-                        <Text onPress={() => navigation.navigate('Login')} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Sair</Text>
-                        <Text style={[Estilo.HeadAlign, Estilo.txtBack]}>Pagina inicial</Text >
+                    <TouchableOpacity onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack,{flexDirection:'row'}]} >
+                        <Text  style={[ Estilo.txtBack,{textDecorationLine: 'underline'}] }>Sair</Text>
+                       
                     </TouchableOpacity> 
+                    <Text style={[Estilo.HeadAlign]}>Pagina inicial</Text >
                 </View>
                 {/*View abaixo contem os botões que irão indicar para as principais funcionalidades do app */}
         

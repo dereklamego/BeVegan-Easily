@@ -23,12 +23,13 @@ export default StyleSheet.create({
 
     //codigo acima duplicado
     txtBack:{
+        width: 70,
         fontSize: 18,
         fontWeight: "bold",
         color: 'white',
-        marginRight:'25%',
+        // marginRight:'25%',
         marginBottom: 5,
-
+        textDecorationLine: 'underline'
     },
 
     //Estilo para botões
@@ -158,9 +159,20 @@ export default StyleSheet.create({
         padding: 5,
         backgroundColor: "#544F1F",
         // alignItems:'left',
-        width: '100%',
-         
+        width: '100%',   
     },
+
+    HeadAlign: {
+        fontSize: 20,
+        alignItems: "center",
+        color: '#fff',
+
+
+
+
+
+    },
+
  
     BottomColor :{
        
