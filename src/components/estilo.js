@@ -9,7 +9,7 @@ export default StyleSheet.create({
         color: '#544F1F'
     },
     txtM:{
-        fontSize: 24,
+        fontSize: 19,
         textAlign: 'center',
         fontWeight: "bold",
         color: '#544F1F'
@@ -23,13 +23,15 @@ export default StyleSheet.create({
 
     //codigo acima duplicado
     txtBack:{
-        width: 70,
+        paddingLeft: 10,
+        // width: 70,
         fontSize: 18,
         fontWeight: "bold",
         color: 'white',
         //marginRight:'25%',
-        marginBottom: 5,
-        textDecorationLine: 'underline'
+        // marginBottom: 5,
+        textDecorationLine: 'underline',
+        
     },
 
     //Estilo para botões
@@ -106,7 +108,7 @@ export default StyleSheet.create({
 
     txtBtn:{
         fontSize: 24,
-        textAlign: "center",
+        // textAlign: "center",
         color: "rgb(84, 79, 31)",
         fontWeight: "bold",
         
@@ -166,23 +168,16 @@ export default StyleSheet.create({
     HeadColor: {
         height: 50,
         backgroundColor: "#544F1F",
-        // alignItems:'left',
         width: '100%',
-        justifyContent: "center",
+        // justifyContent: "center",
         alignItems: "center"   
     },
 
     HeadAlign: {
-        width: '100%',
-        fontSize: 18,
+        fontSize: 22,
         fontWeight: "bold",
         color: 'white',
-        marginRight:'auto',
-        marginLeft: 'auto',
-        marginBottom: 5,
-        textDecorationLine: 'underline',
-             
-
+        marginLeft:'16%',
     },
 
  

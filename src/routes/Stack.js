@@ -27,7 +27,6 @@ export default props => (
             <Stack.Screen name='learn' component={LearnMoreScreen}/>
             <Stack.Screen name='recipes' component={RecipesScreen}/>
             <Stack.Screen name='whatis' component={WhatIsScreen}/>
-
         </Stack.Navigator>
     </SafeAreaView>    
     

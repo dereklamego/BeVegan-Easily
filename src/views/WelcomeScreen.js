@@ -7,8 +7,8 @@ export default ({navigation}) => {
     return(
 
         <SafeAreaView style={[GlobalStyles.AndroidSafeArea,{backgroundColor: '#75D221'}]}>
-            <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity style={{flexDirection:'row'}} >
+            <View style={[Estilo.HeadColor,{flexDirection:'row'}]}>
+                    <TouchableOpacity  >
                             <Text onPress={() => navigation.navigate('Login')} style={[Estilo.txtBack] }>Sair</Text>
                     </TouchableOpacity> 
             </View>
@@ -17,14 +17,13 @@ export default ({navigation}) => {
 
                 <View style={[Estilo.imgView, EstiloLocal.imgView]}>
                     <Image source={require('../img/bevegan-logo.png')}
-                    style={Estilo.img} 
-                    />
+                    style={Estilo.img}/>
                 </View>
 
-                <Text style={padding(20),Estilo.txtP}>Que bom te ver aqui! nós iremos te ajudar com o seu novo estilo de vida, te auxiliando com suas refeições, dicas de receitas e sugestões de locais veganos para você fazer suas compras!</Text>
+                <Text style={[Estilo.txtP,EstiloLocal.infoTxt]}>Que bom te ver aqui! nós iremos te ajudar com o seu novo estilo de vida, te auxiliando com suas refeições, dicas de receitas e sugestões de locais veganos para você fazer suas compras!</Text>
                 <View style={Estilo.BtnContainer}>
                     <TouchableOpacity onPress={() => navigation.navigate('principal')}  style={[Estilo.btnDuvidoso]} title="Entrar">
-                        <Text style={[Estilo.txtBtnG]}>Permitir Localização</Text>
+                        <Text style={Estilo.txtBtnG}>Permitir Localização</Text>
                     </TouchableOpacity>
                         
                     <TouchableOpacity >
@@ -39,10 +38,15 @@ export default ({navigation}) => {
 
 const EstiloLocal = StyleSheet.create({
     imgView:{
-        marginTop:30,
+        marginTop:0,
 
     },
-  
+    
+    infoTxt:{
+        textAlign: 'center',
+        color: 'white',
+        fontWeight: 'bold'
+    }
     
 })
 

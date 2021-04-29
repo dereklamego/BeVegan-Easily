@@ -11,14 +11,15 @@ export default ({navigation}) =>{
         <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}>
             <View style={padding(20)}>
                 <View>
-                <TouchableOpacity style={{flexDirection:'row'}}>
-                        <Text onPress={() => navigation.goBack()} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                    <TouchableOpacity>
+                        <Text onPress={() => navigation.goBack()} style={[Estilo.txtBack] }>Voltar</Text>
                     </TouchableOpacity> 
                 </View>
+
                 <View style={[Estilo.imgView, EstiloLocal.imgView]}>
-                <Image source={require('../img/bevegan-logo.png')}
-                style={Estilo.img} 
-                />
+                    <Image source={require('../img/bevegan-logo.png')}
+                    style={Estilo.img} 
+                    />
                 </View>
 
                 <FormRegister/>
@@ -48,5 +49,5 @@ function padding(a, b, c, d) {
       paddingBottom: c ? c : a,
       paddingLeft: d ? d : (b ? b : a)
     }
-  }
+}
   
