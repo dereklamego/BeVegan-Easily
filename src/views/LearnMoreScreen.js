@@ -8,18 +8,44 @@ export default ({navigation}) => {
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
-            <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity style={{flexDirection:'row'}} >
-                        <Text onPress={() => navigation.goBack()} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                        <Text style={[Estilo.HeadAlign, Estilo.txtBack]}>Saiba mais sobre o veganismo</Text >
-                    </TouchableOpacity> 
+            <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
+                    <TouchableOpacity onPress={() => navigation.goBack()} >
+                        <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                    </TouchableOpacity>
+                    <Text style={[Estilo.HeadAlign]}>Saiba mais</Text > 
                     </View>
 
                     <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
                     
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('whatis')}><Text>O que é</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Dicas</Text></TouchableOpacity>
-                    <TouchableOpacity style={EstiloLocal.Btn}><Text>Impactos ambientais</Text></TouchableOpacity>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('whatis')}>
+                        <View  style={EstiloLocal.txtWrap}>
+                        <Text style = {[Estilo.txtM]}>O que é</Text>
+                        </View>
+
+                        <View style={EstiloLocal.imgContainer}>
+                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
+                        </View>
+                        </TouchableOpacity>
+                       
+                    <TouchableOpacity style={EstiloLocal.Btn}>
+                        <View style={EstiloLocal.txtWrap}>
+                        <Text style = {[Estilo.txtM]}>Dicas</Text>
+                        </View>
+
+                        <View style={EstiloLocal.imgContainer}>
+                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
+                        </View>
+                        </TouchableOpacity>
+
+                    <TouchableOpacity style={EstiloLocal.Btn}>
+                        <View style={EstiloLocal.txtWrap}>
+                        <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
+                        </View>
+
+                        <View style={EstiloLocal.imgContainer}>
+                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
+                        </View>
+                        </TouchableOpacity>
                     
                 </View>
                     {/*Footer da pagina */}
@@ -31,32 +57,50 @@ export default ({navigation}) => {
 //abaixo temos um pouco de estilo local
 const EstiloLocal = StyleSheet.create({
     Btn:{
-            fontSize:30,
-            // marginTop: 75,
+        fontSize:30,
+        // marginTop: 75,
+        flexDirection:'row',
+        display:'flex',
+        height: 80,
+        backgroundColor: 'white',
+        borderRadius: 15,
+        
+        color: '#00ff00',
+        width: "80%",
+        color:"#353535",
+        fontWeight:"bold",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+        elevation: 6,
+    },
+    BtnContainer:{
+        height:'85%',
+        //  flex:1,
+        justifyContent: 'space-evenly',
+        
+    },
+    img:{
+        width:141,
+        height:80,
+        borderBottomRightRadius: 15,
+        borderTopRightRadius:15 ,
 
-            height: 80,
-            backgroundColor: 'white',
-            borderRadius: 15,
-            padding: 12,
-            color: '#00ff00',
-            width: "80%",
-            color:"#353535",
-            fontWeight:"bold",
-            shadowColor: "#000",
-            shadowOffset: {
-                width: 0,
-                height: 3,
-            },
-            shadowOpacity: 0.27,
-            shadowRadius: 4.65,
-    
-            elevation: 6,
-        },
-        BtnContainer:{
-            flex:1,
-            // flexDirection: 'column-reverse',
-            justifyContent: 'space-evenly',
-             //top: "-4%",
-        },
-    
+       
+    },
+    imgContainer:{
+        alignSelf:'center',
+        marginLeft:10,
+
+    },
+    txtWrap:{
+        flex: 1,
+        width: '60%',
+        alignItems:"center",
+        justifyContent: 'center'
+    }
 })

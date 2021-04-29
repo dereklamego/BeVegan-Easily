@@ -177,7 +177,8 @@ export default StyleSheet.create({
         fontSize: 22,
         fontWeight: "bold",
         color: 'white',
-        marginLeft:'16%',
+        marginLeft:'auto',
+        marginRight:'auto',
     },
 
  

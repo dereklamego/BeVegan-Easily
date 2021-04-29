@@ -8,11 +8,12 @@ export default ({navigation}) => {
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
-            <View style={[Estilo.HeadColor]}>
-                    <TouchableOpacity style={{flexDirection:'row'}} >
-                        <Text onPress={() => navigation.goBack()} style={[Estilo.HeadAlign, Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                        <Text style={[Estilo.HeadAlign, Estilo.txtBack]}>Busque aqui</Text >
-                    </TouchableOpacity> 
+            <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
+                    <TouchableOpacity onPress={() => navigation.goBack()} >
+                        <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                    </TouchableOpacity>
+                    <Text style={[Estilo.HeadAlign]}>Busque aqui</Text >
+ 
                     </View>
                     {/*Footer da pagina */}
                     <View style={Estilo.BottomColor}></View>
