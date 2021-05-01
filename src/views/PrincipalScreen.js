@@ -15,7 +15,11 @@ export default ({navigation}) => {
                         <TouchableOpacity onPress={() => navigation.navigate('Login')} >
                             <Text  style={[ Estilo.txtBack]}>Logout</Text>
                         </TouchableOpacity>
-                        <Text style={[Estilo.HeadAlign]}>Pagina inicial</Text>
+
+                        <View style={[Estilo.HeadAlign]}>
+                            <Text style={Estilo.TextHead}>Pagina inicial</Text>
+                        </View>
+                            
                 </View>
 
                 {/*View abaixo contem os botões que irão indicar para as principais funcionalidades do app */}
@@ -71,7 +75,7 @@ export default ({navigation}) => {
                 </View>
             
             <View style={Estilo.BottomColor}></View>
-            
+
         </SafeAreaView>
     )
 }

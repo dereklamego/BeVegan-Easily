@@ -174,11 +174,16 @@ export default StyleSheet.create({
     },
 
     HeadAlign: {
+        zIndex: -1,
+        width: '100%',
+        position: 'absolute',
+        alignItems: 'center'
+    },
+
+    TextHead:{
         fontSize: 22,
         fontWeight: "bold",
         color: 'white',
-        marginLeft:'auto',
-        marginRight:'auto',
     },
 
  
