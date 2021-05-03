@@ -68,7 +68,7 @@ export default ({navigation}) => {
                             </View>
 
                             <View style={EstiloLocal.imgContainer}>
-                                <Image source={require('../img/saibamais.png')} style={EstiloLocal.img} />
+                                <Image source={require('../img/ajuda.png')} style={EstiloLocal.img} />
                             </View>
                     </TouchableOpacity>
                     
@@ -99,7 +99,7 @@ const EstiloLocal = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 5,
         },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
