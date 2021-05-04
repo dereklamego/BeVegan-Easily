@@ -1,7 +1,8 @@
 import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
-import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
+import { Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
+import MapView from 'react-native-maps';
 
 export default ({navigation}) => {
     return(
@@ -17,7 +18,22 @@ export default ({navigation}) => {
                     <Text style={Estilo.TextHead}>Busque aqui</Text>
                 </View>
             </View>
-            
+
+            {/* Mapa */}
+            <MapView style={Estilo.map}
+                     initialRegion={{
+                        latitude: 37.78825,
+                        longitude: -122.4324,
+                        latitudeDelta: 0.0922,
+                        longitudeDelta: 0.0421,
+                      }}
+            >
+
+            </MapView>
+            <View style={Estilo.searchMap}>
+
+            </View>
+
             {/*Footer da pagina */}
             <View style={Estilo.BottomColor}></View>
         </SafeAreaView>

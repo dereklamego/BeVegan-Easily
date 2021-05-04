@@ -196,6 +196,16 @@ export default StyleSheet.create({
         width: '100%'
     
     },
+
+    // Estilo mapa
+    map:{
+        height: '80%',
+        backgroundColor:'black'
+    },
+    searchMap:{
+        height:'20%'
+        
+    }
    
 })
 

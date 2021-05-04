@@ -29,7 +29,8 @@ export default ({navigation}) => {
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('recipes')}>
                         <View style={EstiloLocal.txtWrap} >
                             <Text style = {[Estilo.txtM]}>Receitas</Text>
-                        </View>      
+                        </View>  
+                            
                         <View style={EstiloLocal.imgContainer}>
                             <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
                         </View>
