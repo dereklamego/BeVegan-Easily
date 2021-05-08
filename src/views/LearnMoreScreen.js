@@ -26,46 +26,27 @@ export default ({navigation}) => {
                     <Text style = {[Estilo.txtM]}>O que é</Text>
                     </View>
 
-<<<<<<< HEAD
-                        <View style={EstiloLocal.imgContainer}>
-                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
-                        </View>
-                        </TouchableOpacity>
-                       
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('tips')}> 
-                        <View style={EstiloLocal.txtWrap}>
-                        <Text style = {[Estilo.txtM]}>Dicas</Text>
-                        </View>
-=======
                     <View style={EstiloLocal.imgContainer}>
                         <Image source={require('../img/prato.png')} style={EstiloLocal.img} />
                     </View>
                 </TouchableOpacity>
                     
-                <TouchableOpacity style={EstiloLocal.Btn}>
+                <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('tips')}>
                     <View style={EstiloLocal.txtWrap}>
                     <Text style = {[Estilo.txtM]}>Dicas</Text>
                     </View>
->>>>>>> ecfb293466aee98e0e0f949e806ee994ee3db9c2
 
                     <View style={EstiloLocal.imgContainer}>
                         <Image source={require('../img/lamp.png')} style={EstiloLocal.img} />
                     </View>
                 </TouchableOpacity>
 
-<<<<<<< HEAD
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('enviroment')}> 
-                        <View style={EstiloLocal.txtWrap}>
-                        <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
-                        </View>
-=======
-                <TouchableOpacity style={EstiloLocal.Btn}>
+                <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('enviroment')}>
                     <View style={EstiloLocal.txtWrap}>
                     <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
                     </View>
->>>>>>> ecfb293466aee98e0e0f949e806ee994ee3db9c2
 
-                    <View style={EstiloLocal.imgContainer}>
+                    <View style={EstiloLocal.imgContainer} >
                         <Image source={require('../img/tree.png')} style={EstiloLocal.img} />
                     </View>
                 </TouchableOpacity>
