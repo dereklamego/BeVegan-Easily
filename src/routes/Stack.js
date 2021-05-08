@@ -9,6 +9,8 @@ import MapScreen from '../views/MapScreen'
 import LearnMoreScreen from '../views/LearnMoreScreen'
 import RecipesScreen from '../views/RecipesScreen'
 import WhatIsScreen from '../views/WhatIsScreen'
+import TipsScreen from '../views/TipsScreen'
+import EnviromentalImpactsScreen from '../views/EnviromentalImpactsScreen'
 import { SafeAreaView,Text} from 'react-native'
 
 
@@ -27,6 +29,8 @@ export default props => (
             <Stack.Screen name='learn' component={LearnMoreScreen}/>
             <Stack.Screen name='recipes' component={RecipesScreen}/>
             <Stack.Screen name='whatis' component={WhatIsScreen}/>
+            <Stack.Screen name='tips' component={TipsScreen}/>
+            <Stack.Screen name='enviroment' component={EnviromentalImpactsScreen}/>
         </Stack.Navigator>
     </SafeAreaView>    
     

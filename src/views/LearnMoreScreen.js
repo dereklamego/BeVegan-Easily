@@ -27,7 +27,7 @@ export default ({navigation}) => {
                         </View>
                         </TouchableOpacity>
                        
-                    <TouchableOpacity style={EstiloLocal.Btn}>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('tips')}> 
                         <View style={EstiloLocal.txtWrap}>
                         <Text style = {[Estilo.txtM]}>Dicas</Text>
                         </View>
@@ -37,7 +37,7 @@ export default ({navigation}) => {
                         </View>
                         </TouchableOpacity>
 
-                    <TouchableOpacity style={EstiloLocal.Btn}>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('enviroment')}> 
                         <View style={EstiloLocal.txtWrap}>
                         <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
                         </View>
