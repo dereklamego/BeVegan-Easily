@@ -3,16 +3,12 @@ import Estilo from '../components/estilo';
 import FormLogin from '../components/FormLogin';
 import GlobalStyles from '../components/GlobalStyles';
 import {View, SafeAreaView,Text,TouchableOpacity,Image, Button} from 'react-native';
-import RegisterScreen from '../views/RegisterScreen';
-import { useNavigation } from '@react-navigation/core';
 
 export default ({navigation}) => {
     
+
     //o que isso faz?
     const [login,onChangeText] = useState("");
-  
-    //Verificando se o navigation esta mull, porque não esta funcionando
-    console.warn(navigation!=null)
 
     return(
         // Tag safeareaview não funcionou sem o estilo
@@ -37,7 +33,7 @@ export default ({navigation}) => {
 
                     <Text style={[Estilo.txtP,{textDecorationLine: 'underline'}]}> Esqueceu a senha?</Text>
                     
-                    {/* O navigation.navigate não está funcionando, precisamos resolver  */}
+                    
                     <TouchableOpacity onPress={() => navigation.navigate('cadastro')}>
                         <Text style={[Estilo.txtP,{textDecorationLine: 'underline'}] }>Cadastre-se</Text>
                     </TouchableOpacity> 

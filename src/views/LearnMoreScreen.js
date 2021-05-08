@@ -9,19 +9,24 @@ export default ({navigation}) => {
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
             <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
-                    <TouchableOpacity onPress={() => navigation.goBack()} >
-                        <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                    </TouchableOpacity>
-                    <Text style={[Estilo.HeadAlign]}>Saiba mais</Text > 
+                <TouchableOpacity onPress={() => navigation.goBack()} >
+                    <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                </TouchableOpacity>
+
+                <View style={[Estilo.HeadAlign]}>
+                    <Text style={Estilo.TextHead}>Saiba mais</Text>
+                </View>
+                
+            </View>
+
+            <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
+                    
+                <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('whatis')}>
+                    <View  style={EstiloLocal.txtWrap}>
+                    <Text style = {[Estilo.txtM]}>O que é</Text>
                     </View>
 
-                    <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
-                    
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('whatis')}>
-                        <View  style={EstiloLocal.txtWrap}>
-                        <Text style = {[Estilo.txtM]}>O que é</Text>
-                        </View>
-
+<<<<<<< HEAD
                         <View style={EstiloLocal.imgContainer}>
                             <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
                         </View>
@@ -31,25 +36,43 @@ export default ({navigation}) => {
                         <View style={EstiloLocal.txtWrap}>
                         <Text style = {[Estilo.txtM]}>Dicas</Text>
                         </View>
+=======
+                    <View style={EstiloLocal.imgContainer}>
+                        <Image source={require('../img/prato.png')} style={EstiloLocal.img} />
+                    </View>
+                </TouchableOpacity>
+                    
+                <TouchableOpacity style={EstiloLocal.Btn}>
+                    <View style={EstiloLocal.txtWrap}>
+                    <Text style = {[Estilo.txtM]}>Dicas</Text>
+                    </View>
+>>>>>>> ecfb293466aee98e0e0f949e806ee994ee3db9c2
 
-                        <View style={EstiloLocal.imgContainer}>
-                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
-                        </View>
-                        </TouchableOpacity>
+                    <View style={EstiloLocal.imgContainer}>
+                        <Image source={require('../img/lamp.png')} style={EstiloLocal.img} />
+                    </View>
+                </TouchableOpacity>
 
+<<<<<<< HEAD
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('enviroment')}> 
                         <View style={EstiloLocal.txtWrap}>
                         <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
                         </View>
+=======
+                <TouchableOpacity style={EstiloLocal.Btn}>
+                    <View style={EstiloLocal.txtWrap}>
+                    <Text style = {[Estilo.txtM]}>Impactos ambientais</Text>
+                    </View>
+>>>>>>> ecfb293466aee98e0e0f949e806ee994ee3db9c2
 
-                        <View style={EstiloLocal.imgContainer}>
-                            <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
-                        </View>
-                        </TouchableOpacity>
+                    <View style={EstiloLocal.imgContainer}>
+                        <Image source={require('../img/tree.png')} style={EstiloLocal.img} />
+                    </View>
+                </TouchableOpacity>
                     
-                </View>
-                    {/*Footer da pagina */}
-                    <View style={Estilo.BottomColor}></View>
+            </View>
+            {/*Footer da pagina */}
+            <View style={Estilo.BottomColor}></View>
         </SafeAreaView>
     )
 }
@@ -72,7 +95,7 @@ const EstiloLocal = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 5,
         },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,

@@ -15,7 +15,11 @@ export default ({navigation}) => {
                         <TouchableOpacity onPress={() => navigation.navigate('Login')} >
                             <Text  style={[ Estilo.txtBack]}>Logout</Text>
                         </TouchableOpacity>
-                        <Text style={[Estilo.HeadAlign]}>Pagina inicial</Text>
+
+                        <View style={[Estilo.HeadAlign]}>
+                            <Text style={Estilo.TextHead}>Pagina inicial</Text>
+                        </View>
+                            
                 </View>
 
                 {/*View abaixo contem os botões que irão indicar para as principais funcionalidades do app */}
@@ -25,7 +29,8 @@ export default ({navigation}) => {
                     <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('recipes')}>
                         <View style={EstiloLocal.txtWrap} >
                             <Text style = {[Estilo.txtM]}>Receitas</Text>
-                        </View>      
+                        </View>  
+                            
                         <View style={EstiloLocal.imgContainer}>
                             <Image source={require('../img/menu.png')} style={EstiloLocal.img} />
                         </View>
@@ -64,14 +69,14 @@ export default ({navigation}) => {
                             </View>
 
                             <View style={EstiloLocal.imgContainer}>
-                                <Image source={require('../img/saibamais.png')} style={EstiloLocal.img} />
+                                <Image source={require('../img/ajuda.png')} style={EstiloLocal.img} />
                             </View>
                     </TouchableOpacity>
                     
                 </View>
             
             <View style={Estilo.BottomColor}></View>
-            
+
         </SafeAreaView>
     )
 }
@@ -95,7 +100,7 @@ const EstiloLocal = StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 5,
         },
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
