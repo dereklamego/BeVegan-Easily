@@ -1,7 +1,10 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Dimensions} from 'react-native'
+
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
-    
+
     //Estilo para textos
     txtG:{
         fontSize: 32,
@@ -199,11 +202,27 @@ export default StyleSheet.create({
 
     // Estilo mapa
     map:{
-        height: '80%',
-        backgroundColor:'black'
+       
+        position: 'absolute',
+        height:"100%",
+        width:"100%",
+        backgroundColor:'black',
+        
     },
-    searchMap:{
-        height:'20%'
+    placesContainer:{
+        width: '100%',
+        maxHeight: 200,
+        marginBottom:"12%"
+    },
+    places:{
+        
+        width: windowWidth - 40,
+        maxHeight: 200,
+        backgroundColor: '#FFF',
+        marginHorizontal: 20,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        padding: 20,
         
     }
    

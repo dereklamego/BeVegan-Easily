@@ -1,10 +1,11 @@
-import React , {useState,useEffect,useRef} from 'react';
+import React , {useState,useEffect} from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
-import { Text, View, TouchableOpacity, SafeAreaView} from 'react-native';
+import { Text, View, TouchableOpacity, SafeAreaView,ScrollView,StyleSheet, Dimensions} from 'react-native';
 import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 import { Value } from 'react-native-reanimated';
+import { render } from 'react-dom';
 
 
 export default ({navigation}) => {
@@ -12,8 +13,55 @@ export default ({navigation}) => {
     const [errorMsg, setErrorMsg] = useState(null);
     const [origin, setOrigin] = useState(null);
 
-    //Função para pegar localização do usuario 
-    
+    //Lugares adicionados em um array, possivelmente irá pra um banco de dados
+    state ={ 
+        places:[
+        {
+            id:1,
+            title: 'Health Valley Brasil',
+            description: 'Restaurante informal do dia a dia em sobreloja que serve opções vegetarianas tradicionais no self-service.',
+            latitude:-12.98402053365111, 
+            longitude:-38.51569280593298
+        },
+        {
+            id:2,
+            title: 'Health Valley Barra',
+            description: 'Loja de produtos naturais',
+            latitude:-13.008381269148742, 
+            longitude:-38.52953320267205
+        },
+        {
+            id:3,
+            title: 'Rango Vegan',
+            description: 'Restaurante vegetariano de farto buffet de saladas e pratos quentes e espaço cultural com cursos variados.',
+            latitude:-12.968691600954276,
+            longitude: -38.50632326638643
+        },
+        {
+            id:4,
+            title: 'Restaurante Vegalize',
+            description: 'Delivery de comida Vegana.',
+            latitude: -12.990655695778944, 
+            longitude: -38.51183188428948
+            
+        },
+        {
+            id:5,
+            title:'B-Vegan Gastronomia Vegetariana',
+            description: 'Lanches sem ingredientes animais, com opções de pizzas, sanduíches, sucos e mais, em ambiente descontraído.',
+            latitude: -13.008566017668803, 
+            longitude: -38.530248955453914
+        },
+        {
+            id:6,
+            title: 'YêBistrô',
+            description:'Restaurante vegano com mobília dos anos 60.',
+            latitude:-13.012102068000104, 
+            longitude: -38.48511838331778
+        }
+    ]}
+
+  //Função para pegar localização do usuario 
   useEffect(() => {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
@@ -33,35 +81,101 @@ export default ({navigation}) => {
         })();
   }, []);
 
+   
+        return(
+            //conteudo da pagina
+            <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
+                {/*Header da pagina */}
+                <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
+                    <TouchableOpacity onPress={() => navigation.goBack()} >
+                        <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                    </TouchableOpacity>
 
-
-    return(
-        //conteudo da pagina
-        <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
-            {/*Header da pagina */}
-            <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
-                <TouchableOpacity onPress={() => navigation.goBack()} >
-                    <Text style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                </TouchableOpacity>
-
-                <View style={[Estilo.HeadAlign]}>
-                    <Text style={Estilo.TextHead}>Busque aqui</Text>
+                    <View style={[Estilo.HeadAlign]}>
+                        <Text style={Estilo.TextHead}>Busque aqui</Text>
+                    </View>
                 </View>
-            </View>
 
-            {/* Mapa */}
-            <MapView style={Estilo.map}
-                     initialRegion={origin}
-                     showsUserLocation={true}
-            />
+                {/* Mapa */}
+                <View style={EstiloLocal.container}>
+                <MapView style={Estilo.map}
+                        initialRegion={origin}
+                        showsUserLocation={true}
+                        showsPointsOfInterest={false}
+                        showsBuildings={false}
+                        customMapStyle={[{
+                                        "featureType": "poi.business",
+                                        "stylers": [{
+                                            "visibility": "off"
+                                        }
+                                        ]},
 
-            {/* </MapView> */}
-            <View style={Estilo.searchMap}>
+                                        {
+                                        "featureType": "poi.park",
+                                        "elementType": "labels.text",
+                                        "stylers": [{
+                                            "visibility": "off"
+                                        }]
+                                        }
+                                    ]}
+                >
+                    {this.state.places.map(places =>(
+                        <MapView.Marker
+                            title={places.title}
+                            description={places.description}
+                            key={places.id}
+                            coordinate={{
+                                latitude:places.latitude, 
+                                longitude:places.longitude
+                            }}
+                            image={require('../img/leaf.png')}
+                        />
+                    ))}
+                    
+                </MapView>
+                
+                {/* Scroll dos lugares no mapa */}
+                <ScrollView 
+                    style={Estilo.placesContainer}
+                    horizontal
+                    pagingEnabled
 
-            </View>
+                    onMomentumScrollEnd={e => {
+                        
+                        // const scrolled = e.nativeEvent.contentOffset.x
 
-            {/*Footer da pagina */}
-            <View style={Estilo.BottomColor}></View>
-        </SafeAreaView>
-    )
+                        // const place = (scrolled >0)? scrolled / Dimensions.get('window').width:3;
+
+                        // const {latitude,longitude} = this.state.places[place];
+
+                        // this.mapView.animateToCoordinate({
+                        //     latitude,
+                        //     longitude,
+                        // })
+                    }}
+                >
+                    {this.state.places.map(places =>(
+                        <View key={places.id} style={Estilo.places}>
+                            <Text>{places.title}</Text>
+                            <Text>{places.description}</Text>
+                        </View>
+                        
+
+                    ))}
+                        
+                </ScrollView>
+                </View>
+
+                {/*Footer da pagina */}
+                <View style={Estilo.BottomColor}></View>
+            </SafeAreaView>
+        )
 }
+
+const EstiloLocal = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end'
+    }
+})
