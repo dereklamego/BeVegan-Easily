@@ -12,6 +12,7 @@ export default ({navigation}) => {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const [origin, setOrigin] = useState(null);
+    
 
     //Lugares adicionados em um array, possivelmente irá pra um banco de dados
     state ={ 
@@ -61,7 +62,10 @@ export default ({navigation}) => {
         }
     ]}
 
-  //Função para pegar localização do usuario 
+    _mapReady = () => {
+        this.state.places[0].mark.showCallout();
+    };
+ // Função para pegar localização do usuario 
   useEffect(() => {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
@@ -81,7 +85,8 @@ export default ({navigation}) => {
         })();
   }, []);
 
-   
+        const { latitude, longitude } = this.state.places[0];
+
         return(
             //conteudo da pagina
             <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
@@ -99,6 +104,7 @@ export default ({navigation}) => {
                 {/* Mapa */}
                 <View style={EstiloLocal.container}>
                 <MapView style={Estilo.map}
+                        ref={map => this.mapView = map}
                         initialRegion={origin}
                         showsUserLocation={true}
                         showsPointsOfInterest={false}
@@ -121,6 +127,7 @@ export default ({navigation}) => {
                 >
                     {this.state.places.map(places =>(
                         <MapView.Marker
+                            // ref={mark => places.mark = mark}
                             title={places.title}
                             description={places.description}
                             key={places.id}
@@ -141,17 +148,47 @@ export default ({navigation}) => {
                     pagingEnabled
 
                     onMomentumScrollEnd={e => {
-                        
-                        // const scrolled = e.nativeEvent.contentOffset.x
+                        //CODIGO DO GITHUB DA ROCKESEAT
+                        // const place = (e.nativeEvent.contentOffset.x > 0)
+                        // ? e.nativeEvent.contentOffset.x / Dimensions.get('window').width
+                        // :0;
 
-                        // const place = (scrolled >0)? scrolled / Dimensions.get('window').width:3;
-
-                        // const {latitude,longitude} = this.state.places[place];
+                        // const { latitude, longitude, mark } = this.state.places[place];
 
                         // this.mapView.animateToCoordinate({
-                        //     latitude,
-                        //     longitude,
-                        // })
+                        // latitude,
+                        // longitude
+                        // }, 500);
+
+                        // setTimeout(() => {
+                        // mark.showCallout();
+                        // }, 500)
+                       // }}
+
+                       //MEU CODIGO PARA MUDAR DE LOCAL
+                        // const scrolled = e.nativeEvent.contentOffset.x
+                        // let placeScroll= null;
+                        // let placeDefined = null;
+                        // if(scrolled<0){
+                        //     placeScroll = scrolled /Dimensions.get('window').width;
+                        //     let {latitude,longitude} = placeScroll;
+                        //     console.warn(placeScroll);
+                        // }else{
+                        //     placeDefined = this.state.places.[1];
+                        //     let {latitude,longitude} = placeDefined;
+                        //     console.warn('n entrou')
+                        // }
+
+                        //CODIGO DO VIDEO DA ROCKESEAT 
+                        const scrolled = e.nativeEvent.contentOffset.x
+                        const place = (scrolled >0)? scrolled / Dimensions.get('window').width:0;
+                        
+                        const {latitude,longitude} = state.places.[place];
+                        
+                        this.mapView.animateToCoordinate({
+                            latitude,
+                            longitude,
+                        })
                     }}
                 >
                     {this.state.places.map(places =>(
