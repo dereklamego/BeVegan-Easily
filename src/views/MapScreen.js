@@ -85,7 +85,8 @@ export default ({navigation}) => {
         })();
   }, []);
 
-        const { latitude, longitude } = this.state.places[0];
+    
+        // const { latitude, longitude } = this.state.places[0];
 
         return(
             //conteudo da pagina
@@ -146,49 +147,20 @@ export default ({navigation}) => {
                     style={Estilo.placesContainer}
                     horizontal
                     pagingEnabled
-
-                    onMomentumScrollEnd={e => {
-                        //CODIGO DO GITHUB DA ROCKESEAT
-                        // const place = (e.nativeEvent.contentOffset.x > 0)
-                        // ? e.nativeEvent.contentOffset.x / Dimensions.get('window').width
-                        // :0;
-
-                        // const { latitude, longitude, mark } = this.state.places[place];
-
-                        // this.mapView.animateToCoordinate({
-                        // latitude,
-                        // longitude
-                        // }, 500);
-
-                        // setTimeout(() => {
-                        // mark.showCallout();
-                        // }, 500)
-                       // }}
-
-                       //MEU CODIGO PARA MUDAR DE LOCAL
-                        // const scrolled = e.nativeEvent.contentOffset.x
-                        // let placeScroll= null;
-                        // let placeDefined = null;
-                        // if(scrolled<0){
-                        //     placeScroll = scrolled /Dimensions.get('window').width;
-                        //     let {latitude,longitude} = placeScroll;
-                        //     console.warn(placeScroll);
-                        // }else{
-                        //     placeDefined = this.state.places.[1];
-                        //     let {latitude,longitude} = placeDefined;
-                        //     console.warn('n entrou')
-                        // }
-
-                        //CODIGO DO VIDEO DA ROCKESEAT 
+                    //Função para mudar a localização de acordo com os cards
+                    onMomentumScrollEnd={e => { 
                         const scrolled = e.nativeEvent.contentOffset.x
-                        const place = (scrolled >0)? scrolled / Dimensions.get('window').width:0;
+                        let place = (scrolled >0)? scrolled / Dimensions.get('window').width:-1;
+                        const {latitude,longitude} = this.state.places[parseInt(place+1)];
                         
-                        const {latitude,longitude} = state.places.[place];
-                        
-                        this.mapView.animateToCoordinate({
-                            latitude,
-                            longitude,
-                        })
+                        this.mapView.animateCamera({
+                              center: {
+                                latitude,
+                                longitude
+                              }
+                            },
+                            1000
+                        );
                     }}
                 >
                     {this.state.places.map(places =>(
@@ -207,7 +179,8 @@ export default ({navigation}) => {
                 <View style={Estilo.BottomColor}></View>
             </SafeAreaView>
         )
-}
+    
+};
 
 const EstiloLocal = StyleSheet.create({
     container:{
