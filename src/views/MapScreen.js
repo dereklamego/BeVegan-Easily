@@ -7,6 +7,8 @@ import * as Location from 'expo-location';
 import { Value } from 'react-native-reanimated';
 import { render } from 'react-dom';
 
+const windowWidth = Dimensions.get('window').width;
+const CARD_WIDTH = windowWidth;
 
 export default ({navigation}) => {
     const [location, setLocation] = useState(null);
@@ -103,8 +105,16 @@ export default ({navigation}) => {
     _mapReady = () => {
         this.state.places[0].mark.showCallout();
     };
- // Função para pegar localização do usuario 
-  useEffect(() => {
+
+    const onMarkerPress = (mapEventData) => {
+        const markerID = mapEventData._targetInst.return.key-1;
+
+        let x = markerID * CARD_WIDTH ;
+
+        _scrollView.current.scrollTo({x: x, y: 0, animated: true});
+    }
+    // Função para pegar localização do usuario 
+    useEffect(() => {
         (async () => {
             let { status } = await Location.requestForegroundPermissionsAsync();
             if (status !== 'granted') {
@@ -121,11 +131,11 @@ export default ({navigation}) => {
                 longitudeDelta: 0.00421,
             })
         })();
-  }, []);
+    }, []);
 
     
         const { latitude, longitude,mark } = this.state.places[0];
-
+        const _scrollView = React.useRef(null);
         return(
             //conteudo da pagina
             <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
@@ -142,31 +152,32 @@ export default ({navigation}) => {
 
                 {/* Mapa */}
                 <View style={EstiloLocal.container}>
-                <MapView style={Estilo.map}
-                        ref={map => this.mapView = map}
-                        initialRegion={origin}
-                        showsUserLocation={true}
-                        showsPointsOfInterest={false}
-                        showsBuildings={false}
-                        customMapStyle={[{
-                                        "featureType": "poi.business",
-                                        "stylers": [{
-                                            "visibility": "off"
-                                        }
-                                        ]},
+                    <MapView style={Estilo.map}
+                            ref={map => this.mapView = map}
+                            initialRegion={origin}
+                            showsUserLocation={true}
+                            showsPointsOfInterest={false}
+                            showsBuildings={false}
+                            customMapStyle={[{
+                                            "featureType": "poi.business",
+                                            "stylers": [{
+                                                "visibility": "off"
+                                            }
+                                            ]},
 
-                                        {
-                                        "featureType": "poi.park",
-                                        "elementType": "labels.text",
-                                        "stylers": [{
-                                            "visibility": "off"
-                                        }]
-                                        }
-                                    ]}
-                >
+                                            {
+                                            "featureType": "poi.park",
+                                            "elementType": "labels.text",
+                                            "stylers": [{
+                                                "visibility": "off"
+                                            }]
+                                            }
+                                        ]}
+                    >
                     {this.state.places.map(places =>(
                         <MapView.Marker
                             ref={mark => places.mark = mark}
+                            onPress={(e)=>onMarkerPress(e)}
                             title={places.title}
                             description={places.description}
                             key={places.id}
@@ -181,7 +192,8 @@ export default ({navigation}) => {
                 </MapView>
                 
                 {/* Scroll dos lugares no mapa */}
-                <ScrollView 
+             <ScrollView 
+                    ref={_scrollView}
                     style={Estilo.placesContainer}
                     horizontal
                     pagingEnabled
