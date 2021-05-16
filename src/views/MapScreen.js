@@ -1,7 +1,7 @@
 import React , {useState,useEffect} from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
-import { Text, View, TouchableOpacity, SafeAreaView,ScrollView,StyleSheet, Dimensions} from 'react-native';
+import { Text, View, TouchableOpacity, SafeAreaView,ScrollView,StyleSheet, Dimensions,Image} from 'react-native';
 import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 import { Value } from 'react-native-reanimated';
@@ -17,48 +17,86 @@ export default ({navigation}) => {
     //Lugares adicionados em um array, possivelmente irá pra um banco de dados
     state ={ 
         places:[
-        {
+            {
             id:1,
-            title: 'Health Valley Brasil',
-            description: 'Restaurante informal do dia a dia em sobreloja que serve opções vegetarianas tradicionais no self-service.',
-            latitude:-12.98402053365111, 
-            longitude:-38.51569280593298
+            title: 'Health Valley Barra',
+            description: 'Loja e restaurante de produtos naturais',
+            latitude:-13.008381269148742, 
+            longitude:-38.52953320267205,
+            image: require('../img/healthbarra.png')
         },
         {
             id:2,
-            title: 'Health Valley Barra',
-            description: 'Loja de produtos naturais',
-            latitude:-13.008381269148742, 
-            longitude:-38.52953320267205
+            title: 'Health Valley Brasil',
+            description: 'Restaurante informal em sobreloja que serve opções veganas no self-service.',
+            latitude:-12.98402053365111, 
+            longitude:-38.51569280593298,
+            image: require('../img/healthbrasil.png')
         },
         {
             id:3,
             title: 'Rango Vegan',
-            description: 'Restaurante vegetariano de farto buffet de saladas e pratos quentes e espaço cultural com cursos variados.',
+            description: 'Restaurante e espaço cultural com cursos variados.',
             latitude:-12.968691600954276,
-            longitude: -38.50632326638643
+            longitude: -38.50632326638643,
+            image: require('../img/rangovegan.jpg')
         },
         {
             id:4,
             title: 'Restaurante Vegalize',
-            description: 'Delivery de comida Vegana.',
+            description: 'Restaurante e delivery de comida Vegana.',
             latitude: -12.990655695778944, 
-            longitude: -38.51183188428948
+            longitude: -38.51183188428948,
+            image: require('../img/vegalize.png')
             
         },
         {
             id:5,
             title:'B-Vegan Gastronomia Vegetariana',
-            description: 'Lanches sem ingredientes animais, com opções de pizzas, sanduíches, sucos e mais, em ambiente descontraído.',
+            description: 'Lanches, opções de pizzas, sanduíches, sucos e mais, em ambiente descontraído.',
             latitude: -13.008566017668803, 
-            longitude: -38.530248955453914
+            longitude: -38.530248955453914,
+            image: require('../img/bvegan.png')
         },
         {
             id:6,
             title: 'YêBistrô',
             description:'Restaurante vegano com mobília dos anos 60.',
             latitude:-13.012102068000104, 
-            longitude: -38.48511838331778
+            longitude: -38.48511838331778,
+            image: require('../img/yebistro.png')
+        },
+        {
+            id:7,
+            title: 'Mascavo Vegan',
+            description:'Hamburgueria.',
+            latitude:-12.965677892191698, 
+            longitude: -38.50531515731887,
+            image: require('../img/mascavovegan.png')
+        },
+        {
+            id:8,
+            title: 'PURO HEALTHY FOOD',
+            description:'Opções veganas e vegetarianas, em espaço moderno.',
+            latitude:-12.99382319371233,
+            longitude: -38.459712276906615,
+            image: require('../img/purehealth.png')
+        },
+        {
+            id:9,
+            title: 'Capim Rosa Chá ',
+            description:'Loja de beleza, cosméticos e cuidados pessoais.',
+            latitude:-13.008300759620981,
+            longitude: -38.461069528843446,
+            image: require('../img/capimrosa.png')
+        },
+        {
+            id:10,
+            title: 'Viva o Grão ',
+            description:'Loja e lanchonete de produtos naturais.',
+            latitude:-12.99472965034069,
+            longitude:-38.52413110517079,
+            image: require('../img/vivaograo.png')
         }
     ]}
 
@@ -86,7 +124,7 @@ export default ({navigation}) => {
   }, []);
 
     
-        // const { latitude, longitude } = this.state.places[0];
+        const { latitude, longitude,mark } = this.state.places[0];
 
         return(
             //conteudo da pagina
@@ -128,7 +166,7 @@ export default ({navigation}) => {
                 >
                     {this.state.places.map(places =>(
                         <MapView.Marker
-                            // ref={mark => places.mark = mark}
+                            ref={mark => places.mark = mark}
                             title={places.title}
                             description={places.description}
                             key={places.id}
@@ -151,7 +189,8 @@ export default ({navigation}) => {
                     onMomentumScrollEnd={e => { 
                         const scrolled = e.nativeEvent.contentOffset.x
                         let place = (scrolled >0)? scrolled / Dimensions.get('window').width:-1;
-                        const {latitude,longitude} = this.state.places[parseInt(place+1)];
+
+                        const {latitude,longitude,mark} = this.state.places[parseInt(place+1)];
                         
                         this.mapView.animateCamera({
                               center: {
@@ -161,12 +200,23 @@ export default ({navigation}) => {
                             },
                             1000
                         );
+
+                        setTimeout(() => {
+                            mark.showCallout();
+                        }, 500)
                     }}
                 >
                     {this.state.places.map(places =>(
+                    
                         <View key={places.id} style={Estilo.places}>
-                            <Text>{places.title}</Text>
-                            <Text>{places.description}</Text>
+                            <View>
+                                <Image style={EstiloLocal.image} source={places.image}/>
+                            </View>
+                            <View>
+                                <Text style={Estilo.txtM}>{places.title}</Text>
+                                <Text style={EstiloLocal.txtPlaces}>{places.description}</Text>
+                            </View>
+                                
                         </View>
                         
 
@@ -187,5 +237,19 @@ const EstiloLocal = StyleSheet.create({
         flex:1,
         justifyContent: 'flex-end',
         alignItems: 'flex-end'
+    },
+    image:{
+        height: 130,
+        width: '100%',
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+    },
+    txtPlaces:{
+        fontSize: 16,
+        color: '#544F1F',
+        marginBottom:20,
+        paddingLeft:20,
+        paddingRight:20,
+        textAlign: 'center',
     }
 })

@@ -211,18 +211,18 @@ export default StyleSheet.create({
     },
     placesContainer:{
         width: '100%',
-        maxHeight: 200,
+        maxHeight: 220,
         marginBottom:"12%"
     },
     places:{
         
         width: windowWidth - 40,
-        maxHeight: 200,
+        maxHeight: 220,
         backgroundColor: '#FFF',
         marginHorizontal: 20,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        padding: 20,
+        padding: 0,
         
     }
    
