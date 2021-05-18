@@ -11,6 +11,7 @@ import RecipesScreen from '../views/RecipesScreen'
 import WhatIsScreen from '../views/WhatIsScreen'
 import TipsScreen from '../views/TipsScreen'
 import EnviromentalImpactsScreen from '../views/EnviromentalImpactsScreen'
+import IdRecipes from '../views/IdRecipes'
 import { SafeAreaView,Text} from 'react-native'
 
 
@@ -31,6 +32,7 @@ export default props => (
             <Stack.Screen name='whatis' component={WhatIsScreen}/>
             <Stack.Screen name='tips' component={TipsScreen}/>
             <Stack.Screen name='enviroment' component={EnviromentalImpactsScreen}/>
+            <Stack.Screen name="idpage" component = {IdRecipes}/>
         </Stack.Navigator>
     </SafeAreaView>    
     
