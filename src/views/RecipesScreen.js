@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
 import receitas from '../views/RecipesTable';
 
-export default ({navigation}) => {
-
+export default class ListReceitas extends React.Component {
+      n = new receitas();
+    onRecipes = (receitas) =>{
+        this.props.navigation.navigate('idpage', {nav: receitas.index});
+    };
+    
     //array para as receitas;
     
     //     receitas = [
@@ -19,23 +23,27 @@ export default ({navigation}) => {
     //     }
 
     // ]
+
+    render(){
     return(
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
             <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
                 <TouchableOpacity >
-                    <Text onPress={() => navigation.goBack()} style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
-                </TouchableOpacity> 
+                    <Text onPress={() => this.props.navigation.goBack()} style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>
+                </TouchableOpacity>
 
                 <View style={[Estilo.HeadAlign]}>
                     <Text style={Estilo.TextHead}>Receitas</Text>
                 </View>
                 
             </View>
+
+            {/*mapeamento para passar informações do array */}
             <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
-                {receitas.map((receitas, index)=>(
-                     <TouchableOpacity key={index} style={EstiloLocal.Btn} onPress={() => navigation.navigate('idpage', {key:index})}>
+                {receitas.map(receitas=> (
+                     <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes()}>
                      <View style={EstiloLocal.txtWrap}>
                          <Text style ={[Estilo.txtM]}>{receitas.title}</Text>
                      </View>
@@ -48,7 +56,7 @@ export default ({navigation}) => {
         </SafeAreaView>
     )
 }
-
+}
 const EstiloLocal = StyleSheet.create({
     Btn:{
         fontSize:30,

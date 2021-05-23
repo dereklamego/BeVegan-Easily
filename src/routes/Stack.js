@@ -32,7 +32,7 @@ export default props => (
             <Stack.Screen name='whatis' component={WhatIsScreen}/>
             <Stack.Screen name='tips' component={TipsScreen}/>
             <Stack.Screen name='enviroment' component={EnviromentalImpactsScreen}/>
-            <Stack.Screen name="idpage" component = {IdRecipes}/>
+            <Stack.Screen name="idpage" component = {IdRecipes} value={({params})=> params.nav}/>
         </Stack.Navigator>
     </SafeAreaView>    
     
