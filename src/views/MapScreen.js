@@ -1,12 +1,11 @@
 import React , {useState,useEffect,useRef} from 'react';
-import { Text, View, TouchableOpacity, SafeAreaView,ScrollView,StyleSheet, Dimensions,Image,Animated} from 'react-native';
+import { Text, View, TouchableOpacity, SafeAreaView,ScrollView,StyleSheet, Dimensions,Image} from 'react-native';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 import {Modalize} from 'react-native-modalize'
-// import { Value } from 'react-native-reanimated';
-// import { render } from 'react-dom';
+
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -17,52 +16,8 @@ export default ({navigation}) => {
     const [errorMsg, setErrorMsg] = useState(null);
     const [origin, setOrigin] = useState(null);
     const modalizeRef = useRef(null);
-//------------------------------------------------------------------------------------//
-    // const [alignment] = useState(new Animated.Value(0));
-
-    // const bringUpCard = () => {
-    //     Animated.timing(alignment, {
-    //         toValue:1,
-    //         duration:500
-    //     }).start();
-    // };
-
-    // const hideCard = () => {
-    //     Animated.timing(alignment, {
-    //         toValue:0,
-    //         duration:500
-    //     }).start();
-    // };
-
-    // const cardInterpolate = alignment.interpolate({
-    //     inputRange:[0,1],
-    //     outputRange: [windowHeight/1.5,0]
-    // });
-
-    // const cardStyle={
-    //     transform:[
-    //         {
-    //             translateY: cardInterpolate
-    //         }
-    //     ]
-       
-    // }
-
-    // const gestureHandler = (e) => {
-    //     if(e.nativeEvent.contentOffset.y>0){
-    //     bringUpCard();
-    //     console.warn('11111')     
-    //     }else if(e.nativeEvent.contentOffset.y<0){
-    //         hideCard();
-    //         console.warn('22222')   
-    //     } 
-    // }
-//----------------------------------------------------------------------------------------------
-
     
-
-
-    //Lugares adicionados em um array, possivelmente irá pra um banco de dados
+    //Lugares adicionados em um array
     state ={ 
         places:[
             {

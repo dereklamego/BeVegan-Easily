@@ -3,10 +3,12 @@ const receitas = [
     {
         id: 1,
         title: 'pao',
+        src:'pao'
     },
     {   
         id: 2,
-        title: 'Macarrão'
+        title: 'Macarrão',
+        src:'macarrao'
     }
 ]
 export default receitas;

@@ -5,9 +5,14 @@ import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollVie
 import receitas from '../views/RecipesTable';
 
 export default class ListReceitas extends React.Component {
-      n = new receitas();
+    //   n = new receitas();
+    // onRecipes = (receitas) =>{
+    //     this.props.navigation.navigate('idpage', {nav: receitas.index});
+    // };
+
     onRecipes = (receitas) =>{
-        this.props.navigation.navigate('idpage', {nav: receitas.index});
+        this.props.navigation.navigate(receitas);
+        console.warn(receitas)
     };
     
     //array para as receitas;
@@ -43,7 +48,7 @@ export default class ListReceitas extends React.Component {
             {/*mapeamento para passar informações do array */}
             <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
                 {receitas.map(receitas=> (
-                     <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes()}>
+                     <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes(receitas.src)}>
                      <View style={EstiloLocal.txtWrap}>
                          <Text style ={[Estilo.txtM]}>{receitas.title}</Text>
                      </View>

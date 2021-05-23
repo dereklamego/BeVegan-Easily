@@ -13,6 +13,8 @@ import TipsScreen from '../views/TipsScreen'
 import EnviromentalImpactsScreen from '../views/EnviromentalImpactsScreen'
 import IdRecipes from '../views/IdRecipes'
 import { SafeAreaView,Text} from 'react-native'
+import pao from '../views/pao'
+import macarrao from '../views/macarrao'
 
 
 const Stack = createStackNavigator()
@@ -33,6 +35,10 @@ export default props => (
             <Stack.Screen name='tips' component={TipsScreen}/>
             <Stack.Screen name='enviroment' component={EnviromentalImpactsScreen}/>
             <Stack.Screen name="idpage" component = {IdRecipes} value={({params})=> params.nav}/>
+
+            <Stack.Screen name='pao' component={pao}/>
+            <Stack.Screen name='macarrao' component={macarrao}/>
+
         </Stack.Navigator>
     </SafeAreaView>    
     
