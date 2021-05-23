@@ -17,7 +17,7 @@ export default ({navigation}) => {
             <View style={[padding(20)]}>  
 
                 <View style={Estilo.imgView}>
-                    <Image source={require('../img/bevegan-logo.png')}
+                    <Image source={require('../img/bevegan-logo2.png')}
                     style={Estilo.img} 
                     />
                 </View>

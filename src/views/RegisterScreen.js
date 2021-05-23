@@ -17,7 +17,7 @@ export default ({navigation}) =>{
                 </View>
 
                 <View style={[Estilo.imgView, EstiloLocal.imgView]}>
-                    <Image source={require('../img/bevegan-logo.png')}
+                    <Image source={require('../img/bevegan-logo2.png')}
                     style={Estilo.img} 
                     />
                 </View>

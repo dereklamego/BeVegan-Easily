@@ -202,27 +202,28 @@ export default StyleSheet.create({
 
     // Estilo mapa
     map:{
-       
+       top:0,
         position: 'absolute',
-        height:"100%",
+        height:"95%",
         width:"100%",
         backgroundColor:'black',
         
     },
     placesContainer:{
         width: '100%',
-        maxHeight: 220,
-        marginBottom:"12%"
+        maxHeight: 250,
+        // marginBottom:"12%",
+        
     },
     places:{
-        
+        flex:1,
         width: windowWidth - 40,
-        maxHeight: 220,
         backgroundColor: '#FFF',
         marginHorizontal: 20,
         borderTopLeftRadius: 10,
         borderTopRightRadius: 10,
-        padding: 0,
+        padding: 0
+        
         
     }
    
