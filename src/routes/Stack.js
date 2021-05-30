@@ -13,8 +13,8 @@ import TipsScreen from '../views/TipsScreen'
 import EnviromentalImpactsScreen from '../views/EnviromentalImpactsScreen'
 import IdRecipes from '../views/IdRecipes'
 import { SafeAreaView,Text} from 'react-native'
-import pao from '../views/pao'
-import macarrao from '../views/macarrao'
+import pao from '../views/receitas/pao'
+import macarrao from '../views/receitas/macarrao'
 
 
 const Stack = createStackNavigator()

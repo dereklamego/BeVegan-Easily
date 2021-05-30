@@ -1,6 +1,6 @@
 import React from 'react';
-import Estilo from '../components/estilo';
-import GlobalStyles from '../components/GlobalStyles';
+import Estilo from '../../components/estilo';
+import GlobalStyles from '../../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
 
 
