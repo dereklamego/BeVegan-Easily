@@ -17,8 +17,28 @@ export default ({navigation}) => {
                 </View>
             </View>
             <View>
-                <Text style={[EstiloWhatIs.txt]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris ligula, ornare quis justo a, tincidunt congue mi. Aliquam consequat metus commodo magna dapibus, id sollicitudin urna molestie. Pellentesque maximus eleifend mauris, ac condimentum lorem tristique sit amet. In dapibus egestas commodo. Maecenas laoreet tempor ipsum et gravida. Quisque et est a odio viverra maximus. Sed condimentum semper sapien, ac ultricies tellus volutpat vitae. Mauris accumsan volutpat mauris, non posuere augue facilisis id. Duis ut erat ut turpis interdum vulputate ac vitae leo.</Text>  
-               <Image source={require('../img/oqueé.png')} style={[EstiloWhatIs.img]}/>
+                <Image source={require('../img/oqueé.png')} style={[EstiloWhatIs.img]}/>
+                <Text style={[EstiloWhatIs.txtTitle]}>Veganismo</Text>
+                <Text style={[EstiloWhatIs.txt]}>
+                    É uma filosofia e estilo de vida que busca excluir, na medida do possível e praticável, todas as
+                    formas de exploração e crueldade contra animais na alimentação, vestuário e qualquer outra
+                    finalidade e por extensão, que promova o desenvolvimento e uso de alternativas livres de origem
+                    animal para benefício de humanos, animais e meio ambiente.
+        
+                </Text>
+                <Text style={[EstiloWhatIs.txt]}>
+                Assim, além de não consumir nenhum tipo de carne, os veganos também retiram da sua rotina todos os
+                alimentos e produtos de origem animal ou que tenham causado algum tipo de sofrimento aos animais.
+                </Text>
+                
+                <Text style={[EstiloWhatIs.txtTitle]}> o Video vai ser aqui </Text>
+                <Text style={[EstiloWhatIs.txt]}>
+                Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
+                nenhum tipo de produto de origem animal, seja de higiene, cosméticos, vestuário, medicinais, entre outros.
+                </Text>
+
+                
+              
             </View>
             {/*Footer da pagina */}
             <View style={Estilo.BottomColor}></View>
@@ -28,16 +48,32 @@ export default ({navigation}) => {
 
 {/*Estilização local*/}
 const EstiloWhatIs= StyleSheet.create({
+    
         txt:{
             fontSize: 18,
             fontWeight: "bold",
-            color: '#fff',
-            marginBottom:20,
-            marginLeft:20,
+            justifyContent: 'center',
+            color: '#2B280D',
+            margin: 10,
+            
+            textAlign: 'left',
         },
 
+        txtTitle:{
+            fontSize: 22,
+            fontWeight: "bold",
+            color:	"#000",
+            marginBottom: 10,
+            marginLeft: 10
+        },
+        // tem que botar a imagem alocada a tela toda de uma forma nao manual
         img:{
-            marginLeft:75,
+            width: 400,
+            marginTop: 30
+            
+           /*  marginLeft:75,
+            marginBottom: 15,
+            marginEnd: 50 */
 
         }
 
