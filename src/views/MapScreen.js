@@ -5,6 +5,7 @@ import GlobalStyles from '../components/GlobalStyles';
 import MapView from 'react-native-maps';
 import * as Location from 'expo-location';
 import {Modalize} from 'react-native-modalize'
+import { render } from 'react-dom';
 
 
 const windowWidth = Dimensions.get('window').width;
@@ -15,8 +16,10 @@ export default ({navigation}) => {
     const [location, setLocation] = useState(null);
     const [errorMsg, setErrorMsg] = useState(null);
     const [origin, setOrigin] = useState(null);
+
     const modalizeRef = useRef(null);
-    
+    let cardId=null;
+    let modalList =[];
     //Lugares adicionados em um array
     state ={ 
         places:[
@@ -29,7 +32,10 @@ export default ({navigation}) => {
             tel:'(71) 99688-6465',
             latitude:-13.008381269148742, 
             longitude:-38.52953320267205,
-            image: require('../img/healthbarra.png')
+            image: require('../img/healthbarra.png'),
+            info: '🏠 Loja, restaurante e lanchonete\n🌱 Produtos naturais, vegetarianos e veganos'
+                
+            
         },
         {
             id:2,
@@ -110,17 +116,25 @@ export default ({navigation}) => {
         this.state.places[0].mark.showCallout();
     };
 
-    function onOpen(){
-        modalizeRef.current?.open();
+    //variaveis para mudança de informações no modal
+    const [tituloModal,setTitulo] = useState(null)
+    const [imageModal,setImage] = useState(null)
+    const [infoModal,setInfo] = useState(null)
+    let placeModal;
+    onOpen = (param)=>{
+        placeModal = this.state.places[param-1];
+        setTitulo(placeModal.title)
+        setImage(placeModal.image)
+        setInfo(placeModal.info)
+        modalizeRef.current?.open()
     }
-
+    //FUnção para mudar visualização do marcador ao dar scroll nos locais
     const onMarkerPress = (mapEventData) => {
         const markerID = mapEventData._targetInst.return.key-1;
-
         let x = markerID * CARD_WIDTH ;
-
         _scrollView.current.scrollTo({x: x, y: 0, animated: true});
     }
+
     // Função para pegar localização do usuario 
     useEffect(() => {
         (async () => {
@@ -196,11 +210,8 @@ export default ({navigation}) => {
                             image={require('../img/leaf.png')}
                         />
                     ))}
-                
                 </MapView>
         
-                {/* onScroll={(e)=>gestureHandler(e)} */}
-                {/* onScroll={(e)=>gestureHandler(e)} */}
                 {/* Scroll dos lugares no mapa */}
                 <ScrollView 
                     style={[Estilo.placesContainer]}
@@ -211,9 +222,7 @@ export default ({navigation}) => {
                     onMomentumScrollEnd={e => { 
                         const scrolled = e.nativeEvent.contentOffset.x
                         let place = (scrolled >0)? scrolled / Dimensions.get('window').width:-1;
-
                         const {latitude,longitude,mark} = this.state.places[parseInt(place+1)];
-                        
                         this.mapView.animateCamera({
                                 center: {
                                     latitude,
@@ -228,54 +237,44 @@ export default ({navigation}) => {
                             mark.showCallout();
                         }, 500)
                     }}
-                >
+                > 
                     {this.state.places.map(places =>(
-
-                        <View key={places.id} style={[Estilo.places]}>
-                            <View>
-                                <TouchableOpacity style={EstiloLocal.grabber} onPress={onOpen}></TouchableOpacity>
+                        <View 
+                            key={places.id} 
+                            style={[Estilo.places]} 
+                        >
+                            <View>  
                                 <Image style={EstiloLocal.image} source={places.image}/>
                             </View>
                             <View >
                                 <Text style={Estilo.txtM}>{places.title}</Text>
-
                                 <Text style={EstiloLocal.txtPlaces}>
                                     {places.description} {'\n'}
                                 </Text>
-                            
-                                {/* <Text style={EstiloLocal.txtInfo} >
-                                    <Text style={EstiloLocal.titleDescription}>Endereço: </Text>{places.address} {'\n'}
-                                    <Text style={EstiloLocal.titleDescription}>Telefone: </Text>{places.tel}
-                                </Text> */}
-                                
-                            </View> 
-
+                                <TouchableOpacity style={EstiloLocal.grabber} onPress={()=>this.onOpen(places.id)}>
+                                    <Text style={EstiloLocal.titleDescription}>Detalhes</Text>
+                                </TouchableOpacity>
+                            </View>                   
                         </View>
-
-                    ))}
-                        
+                    ))}  
                 </ScrollView>
 
+                {/* MODAL */}
                 <Modalize
                     ref={modalizeRef}
                     snapPoint={500}
                     modalHeight={500}
-                >
+
+                > 
                     <View 
                         style={{ 
-                            flex:1,
                             height:500,
-                            flexDirection: 'row',
-                            position:'absolute'
                         }}>
-                            <Text style={Estilo.txtM}>EXEMPLO</Text>
-
-                            <Text style={EstiloLocal.txtPlaces}>
-                                DESCRIÇÃO EXEMPLO
-                            </Text>
+                            <Image style={EstiloLocal.image} source={imageModal}/>
+                            <Text style={Estilo.txtM}>{tituloModal}</Text>
+                            <Text style={EstiloLocal.txtPlaces}>{infoModal}</Text>   
                     </View> 
                 </Modalize>
-                           
             </View>
             {/*Footer da pagina */}
             <View style={Estilo.BottomColor}></View>
@@ -298,14 +297,13 @@ const EstiloLocal = StyleSheet.create({
     txtPlaces:{
         fontSize: 16,
         color: '#544F1F',
-        marginBottom:10,
         paddingLeft:20,
         paddingRight:20,
         textAlign: 'center',
     },
     titleDescription:{
         fontWeight:'bold',
-    
+        color: '#544F1F'
     },
     txtInfo:{
         marginLeft: 10,
@@ -313,13 +311,30 @@ const EstiloLocal = StyleSheet.create({
         fontSize:16
     },
     grabber:{
-        marginTop:10,
-        position:'absolute',
+        marginTop:-10,
         zIndex:1,
         alignSelf: 'center',
         width:85,
+        height:35,
         borderRadius:5,
-        borderTopWidth:20,
-        borderTopColor:'white'
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor:'orange',
+        shadowColor: "#000",
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+        elevation: 6,
+    },
+    modalContainer:{
+        
+        position: 'relative',
+        width: 600,
+        height: 300,
+        paddingBottom:200,
+        backgroundColor:'white'
     }
 })

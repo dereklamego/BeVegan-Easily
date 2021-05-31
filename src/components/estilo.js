@@ -211,7 +211,7 @@ export default StyleSheet.create({
     },
     placesContainer:{
         width: '100%',
-        maxHeight: 250,
+        maxHeight: 300,
         // marginBottom:"12%",
         
     },
