@@ -16,23 +16,27 @@ export default ({navigation}) => {
                         <Text style={[Estilo.TextHead,{textAlign:'center'}]}> O que é veganismo</Text>
                 </View>
             </View>
-            <View>
-                <Image source={require('../img/oqueé.png')} style={[EstiloWhatIs.img]}/>
-                <Text style={[EstiloWhatIs.txtTitle]}>Veganismo</Text>
-                <Text style={[EstiloWhatIs.txt]}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{flex:'row'}}>
+             <View style={[EstiloLocal.imgContainer]}>
+                 <Image id = 'minha img' source={require('../img/Whatisss.jpg')} style={[EstiloLocal.img]}/>
+             </View>
+            <View style={[EstiloLocal.textContainer]}>
+               
+                <Text style={[EstiloLocal.txtTitle]}>Veganismo</Text>
+                <Text style={[EstiloLocal.txt]}>
                     É uma filosofia e estilo de vida que busca excluir, na medida do possível e praticável, todas as
                     formas de exploração e crueldade contra animais na alimentação, vestuário e qualquer outra
                     finalidade e por extensão, que promova o desenvolvimento e uso de alternativas livres de origem
                     animal para benefício de humanos, animais e meio ambiente.
         
                 </Text>
-                <Text style={[EstiloWhatIs.txt]}>
+                <Text style={[EstiloLocal.txt]}>
                 Assim, além de não consumir nenhum tipo de carne, os veganos também retiram da sua rotina todos os
                 alimentos e produtos de origem animal ou que tenham causado algum tipo de sofrimento aos animais.
                 </Text>
                 
-                <Text style={[EstiloWhatIs.txtTitle]}> o Video vai ser aqui </Text>
-                <Text style={[EstiloWhatIs.txt]}>
+                <Text style={[EstiloLocal.txtTitle]}> o Video vai ser aqui </Text>
+                <Text style={[EstiloLocal.txt]}>
                 Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
                 nenhum tipo de produto de origem animal, seja de higiene, cosméticos, vestuário, medicinais, entre outros.
                 </Text>
@@ -40,6 +44,7 @@ export default ({navigation}) => {
                 
               
             </View>
+            </ScrollView>
             {/*Footer da pagina */}
             <View style={Estilo.BottomColor}></View>
         </SafeAreaView>
@@ -47,7 +52,7 @@ export default ({navigation}) => {
 }
 
 {/*Estilização local*/}
-const EstiloWhatIs= StyleSheet.create({
+const EstiloLocal= StyleSheet.create({
     
         txt:{
             fontSize: 18,
@@ -68,13 +73,27 @@ const EstiloWhatIs= StyleSheet.create({
         },
         // tem que botar a imagem alocada a tela toda de uma forma nao manual
         img:{
-            width: 400,
-            marginTop: 30
+            width: '100%',
+            height: '100%'
             
            /*  marginLeft:75,
             marginBottom: 15,
             marginEnd: 50 */
 
+        },
+
+        imgContainer:{
+            width:'100%',
+            height:'50%',
+
+        },
+
+        textContainer:{
+                backgroundColor: 'white',
+
+
+
         }
+
 
 })
