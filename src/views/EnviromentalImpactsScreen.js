@@ -18,7 +18,7 @@ export default ({navigation}) => {
             </View>
             <View>
 
-            <Text style={[Estilo.txtP,{color:'#ffff'}]}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla mauris ligula, ornare quis justo a, tincidunt congue mi. Aliquam consequat metus commodo magna dapibus, id sollicitudin urna molestie. Pellentesque maximus eleifend mauris, ac condimentum lorem tristique sit amet. In dapibus egestas commodo. Maecenas laoreet tempor ipsum et gravida. Quisque et est a odio viverra maximus. Sed condimentum semper sapien, ac ultricies tellus volutpat vitae. Mauris accumsan volutpat mauris, non posuere augue facilisis id. Duis ut erat ut turpis interdum vulputate ac vitae leo. Phasellus urna sapien, tincidunt sit amet sem sit amet, aliquet posuere libero. Nulla at tincidunt metus, vitae laoreet orci. Nunc vitae scelerisque tortor. Integer congue malesuada maximus. Aenean id est vitae nulla euismod lobortis vitae et nibh. Nunc auctor et libero a accumsan. Nulla faucibus quis neque ut mollis.</Text>
+            <Text style={[Estilo.txtP,{color:'#ffff'}]}></Text>
 
             </View>
             {/*Footer da pagina */}

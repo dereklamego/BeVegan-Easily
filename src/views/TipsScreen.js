@@ -17,7 +17,7 @@ export default ({navigation}) => {
                         <Text style={[Estilo.TextHead,{textAlign:'center'}]}> Dicas</Text>
                 </View>
             </View>
-            <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.contentContainer}>
+            <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={styles.contentContainer}>
                 <Text style={[Estilo.txtP,{color:'#ffff'}]}>Lorem ipsum dolor sit amet</Text>  
                 <Text style={[Estilo.txtP,{color:'#ffff'}]}>1.Maecenas laoreet tempor ipsum et gravida. Quisque et est a odio viverra maximus. Sed condimentum semper sapien, ac ultricies tellus volutpat vitae. Mauris accumsan volutpat mauris, non posuere augue facilisis id. Duis ut erat ut turpis interdum vulputate ac vitae leo. Phasellus urna sapien, tincidunt sit amet sem sit amet, aliquet posuere libero. Nulla at tincidunt metus, vitae laoreet orci. Nunc vitae scelerisque tortor. Integer congue malesuada maximus. Aenean id est vitae nulla euismod lobortis vitae et nibh. Nunc auctor et libero a accumsan. Nulla faucibus quis neque ut mollis.</Text>
                 <Text style={[Estilo.txtP,{color:'#ffff'}]}>2.Duis quis ligula eros. Morbi blandit odio mi, quis pretium ligula faucibus vel. Ut et ultrices lorem. Fusce consectetur, mi sed ultricies ultrices, quam magna aliquet felis, id pharetra tellus mi vel tortor. Vestibulum vel vestibulum eros, quis auctor est. Quisque luctus porttitor nunc, eu mollis libero semper vitae. Nulla erat diam, aliquam id justo et, suscipit euismod lacus. In quis dolor arcu. In ut neque urna. Sed placerat, magna at vestibulum scelerisque, diam nisl mattis ligula, sit amet ullamcorper sem velit nec felis. </Text> 
