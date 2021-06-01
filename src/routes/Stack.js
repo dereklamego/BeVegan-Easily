@@ -15,8 +15,8 @@ import IdRecipes from '../views/IdRecipes'
 import {SafeAreaView,Text} from 'react-native'
 import pao from '../views/receitas/pao'
 import macarrao from '../views/receitas/macarrao'
-
-
+import grao from '../views/receitas/grao'
+import EmpadaoV from '../views/receitas/EmpadaoV'
 
 const Stack = createStackNavigator()
 
@@ -39,8 +39,9 @@ export default props => (
 
             <Stack.Screen name='pao' component={pao}/>
             <Stack.Screen name='macarrao' component={macarrao}/>
-
-        </Stack.Navigator>
+            <Stack.Screen name='grao' component ={grao} />
+            <Stack.Screen name='EmpadaoV' component={EmpadaoV} />
+        </Stack.Navigator> 
     </SafeAreaView>    
     
 )
