@@ -63,7 +63,7 @@ export default ({navigation}) => {
                     </TouchableOpacity>
 
                     {/*usando pagina ajuda para testar o botão continuar da pagina sobre veganismo */}
-                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('vegan')}>
+                    <TouchableOpacity style={EstiloLocal.Btn} onPress={() => navigation.navigate('help')}>
                             <View style={EstiloLocal.txtWrap}>
                                 <Text style ={[Estilo.txtM]}>Ajuda</Text>
                             </View>

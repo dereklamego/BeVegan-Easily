@@ -4,7 +4,7 @@ import LoginScreen from '../views/LoginScreen'
 import RegisterScreen from '../views/RegisterScreen'
 import WelcomeScreen from '../views/WelcomeScreen'
 import PrincipalScreen from '../views/PrincipalScreen'
-import VeganScreen from '../views/VeganScreen'
+import HelpScreen from '../views/HelpScreen'
 import MapScreen from '../views/MapScreen'
 import LearnMoreScreen from '../views/LearnMoreScreen'
 import RecipesScreen from '../views/RecipesScreen'
@@ -28,7 +28,7 @@ export default props => (
             <Stack.Screen name="cadastro" component={RegisterScreen}/>
             <Stack.Screen name="welcome" component={WelcomeScreen}/>
             <Stack.Screen name="principal" component={PrincipalScreen}/>
-            <Stack.Screen name="vegan" component={VeganScreen}/>
+            <Stack.Screen name="help" component={HelpScreen}/>
             <Stack.Screen name="map" component={MapScreen}/>
             <Stack.Screen name='learn' component={LearnMoreScreen}/>
             <Stack.Screen name='recipes' component={RecipesScreen}/>
