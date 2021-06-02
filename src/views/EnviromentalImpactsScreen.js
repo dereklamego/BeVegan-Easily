@@ -30,16 +30,26 @@ export default ({navigation}) => {
                     {/* </View> */}
                     <View style={[EstiloLocal.textContainer]}>
                     
-                        <Text style={[EstiloLocal.txtTitle]}></Text>
+                        <Text style={[EstiloLocal.txtTitle]}>O veganismo pode estagnar o aquecimento global?</Text>
+
                         <Text style={[EstiloLocal.txt]}>
-                            É uma filosofia e estilo de vida que busca excluir, na medida do possível e praticável, todas as
-                            formas de exploração e crueldade contra animais na alimentação, vestuário e qualquer outra
-                            finalidade e por extensão, que promova o desenvolvimento e uso de alternativas livres de origem
-                            animal para benefício de humanos, animais e meio ambiente.
-                            É uma filosofia e estilo de vida que busca excluir, na medida do possível e praticável, todas as
-                            formas de exploração e crueldade contra animais na alimentação, vestuário e qualquer outra
-                            finalidade e por extensão, que promova o desenvolvimento e uso de alternativas livres de origem
-                            animal para benefício de humanos, animais e meio ambiente.
+                            As graves mudanças climaticas no nosso planeta, tem relações com aproximadamente 8 bilhões de pessoas no mundo vivendo através de consumo insustentável.
+                        </Text>
+                        <Text style={[EstiloLocal.txt]}>
+                            Um estudo publicado na revista Science por pesquisadores da Universidade de Oxford (na Inglaterra), mostra que o principal agente pelos impactos ambientais é o consumo de produtos de origem animal.
+                        </Text>
+                        <Text style={[EstiloLocal.subtTitles]}>
+                            Mas por que isso acontece?
+                        </Text>
+                        <Text style={[EstiloLocal.txt]}>
+                            Atualmente segundo a Food and Agriculture Organization (FAO), órgão vinculado à ONU, o rebanho mundial é composto por cerca de 1,22 bilhões de cabeças de gado, 19 bilhões de frangos, e por volta de 980 milhões de porcos, que consomen milhões de recursos todos os dias.
+                        </Text>
+                        <Text style={[EstiloLocal.txt,{fontWeight:'bold'}]}>-Alto consumo de recursos hídricos</Text>
+                        <Text style={[EstiloLocal.txt]}>
+                            Essa assombrosa quantidade de gados
+                        </Text>
+                        <Text style={[EstiloLocal.txt]}>
+                            o de humanos, animais e meio ambiente.
                             É uma filosofia e estilo de vida que busca excluir, na medida do possível e praticável, todas as
                             formas de exploração e crueldade contra animais na alimentação, vestuário e qualquer outra
                             finalidade e por extensão, que promova o desenvolvimento e uso de alternativas livres de origem
@@ -117,9 +127,8 @@ const EstiloLocal= StyleSheet.create({
     
         txt:{
             fontSize: 16,
-            
             justifyContent: 'center',
-            color: '#2B280D',
+            color: '#544F1F',
             margin: 10,
             textAlign: 'left',
         },
@@ -127,7 +136,7 @@ const EstiloLocal= StyleSheet.create({
         txtTitle:{
             fontSize: 22,
             fontWeight: "bold",
-            color:	"#000",
+            color:	'#544F1F',
             marginBottom: 10,
             marginLeft: 10
         },
@@ -169,6 +178,12 @@ const EstiloLocal= StyleSheet.create({
             color:'white',
             fontSize:45,
             fontWeight:'bold'
+        },
+        subtTitles:{
+            fontWeight:'bold',
+            fontSize: 18,
+            paddingLeft:10,
+            color:	'#544F1F',
         }
 
 
