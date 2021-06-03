@@ -76,7 +76,7 @@ export default ({navigation}) => {
                         </Text>
 
                         <Text style={[EstiloLocal.subtTitles]}>
-                            Quais os impactos o veganimso causaria ao planeta?
+                            Quais os impactos o veganismo causaria ao planeta?
                         </Text>
 
                             <Text style={[EstiloLocal.txt]}>
