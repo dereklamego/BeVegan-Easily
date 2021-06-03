@@ -2,9 +2,13 @@ import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
+import { Video, AVPlaybackStatus } from 'expo-av'
 
 export default ({navigation}) => {
+    const video = React.useRef(null);
+    const [status, setStatus] = React.useState({});
     return(
+        
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
@@ -36,7 +40,20 @@ export default ({navigation}) => {
                         alimentos e produtos de origem animal ou que tenham causado algum tipo de sofrimento aos animais.
                     </Text>
                     
-                    <Text style={[EstiloLocal.txtTitle]}> o Video vai ser aqui </Text>
+                    <View style={[EstiloLocal.container]}>
+                    <Video
+                        ref={video}
+                        style={[EstiloLocal.video]}
+                        source={{
+                        uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
+                        }}
+                        useNativeControls
+                        resizeMode="contain"
+                        isLooping
+                        onPlaybackStatusUpdate={status => setStatus(() => status)}
+                    />
+                  
+                    </View>
                     <Text style={[EstiloLocal.txt]}>
                         Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
                         nenhum tipo de produto de origem animal, seja de higiene, cosméticos, vestuário, medicinais, entre outros.
@@ -134,7 +151,25 @@ const EstiloLocal= StyleSheet.create({
             paddingVertical:40,
             paddingBottom:"140%"
              
-        }
+        },
+
+        container: {
+            flex: 1,
+            justifyContent: 'center',
+            backgroundColor: '#ecf0f1',
+          },
+          video: {
+            alignSelf: 'center',
+            width: 320,
+            height: 200,
+          },
+          buttons: {
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+          },
+
+            
 
 
 })
