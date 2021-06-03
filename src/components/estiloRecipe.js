@@ -5,7 +5,24 @@ const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
     SView:{
-        width: '95%'
+        height: '85%',
+        
+    },
+
+    txtTitle:{
+        fontSize: 22,
+        textAlign: 'center',
+        fontWeight: "bold",
+        color: '#544F1F'
+    },
+
+    // mudar essa cor
+    txtNormal:{
+        fontSize: 18,
+        color: '#fff'
     }
+    
+
+
 
 })

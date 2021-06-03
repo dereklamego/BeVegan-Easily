@@ -39,6 +39,8 @@ export default ({navigation}) => {
                     <Text style={[EstiloLocal.txt]}>
                     Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
                     nenhum tipo de produto de origem animal, seja de higiene, cosméticos, vestuário, medicinais, entre outros.
+                    
+
                     </Text>
 
                     
@@ -90,6 +92,7 @@ const EstiloLocal= StyleSheet.create({
 
         textContainer:{
              backgroundColor: 'white',
+             
         }
 
 
