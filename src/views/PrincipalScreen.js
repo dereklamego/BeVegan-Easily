@@ -1,7 +1,8 @@
 import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
-import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
+import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet} from 'react-native';
+import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 
 
 export default ({navigation}) => {
@@ -75,7 +76,11 @@ export default ({navigation}) => {
                     
                 </View>
             
-            <View style={Estilo.BottomColor}></View>
+            <View style={Estilo.BottomColor}>
+                <MaterialCommunityIcons name="heart" size={30} color="white" />
+                <Feather name="search" size={30} color="white" />
+                <Feather name="user" size={30} color="white" />
+            </View>
 
         </SafeAreaView>
     )
