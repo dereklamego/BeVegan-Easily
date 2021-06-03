@@ -71,7 +71,7 @@ const EstiloLocal= StyleSheet.create({
             marginBottom: 10,
             marginLeft: 10
         },
-        // tem que botar a imagem alocada a tela toda de uma forma nao manual
+
         img:{
             width: '100%',
             height: '100%'
