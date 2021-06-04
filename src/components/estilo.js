@@ -83,25 +83,25 @@ export default StyleSheet.create({
     },
 
     //codigo acima duplicado
-    btnDuvidoso:{
-        marginTop:20, 
-        marginBottom:20,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor:'#544F1F',
-        width:"70%",
-        height:35,
-        borderRadius:5,
-        shadowColor: "#000",
-        shadowOffset: {
-	        width: 0,
-	        height: 3,
-        },
-        shadowOpacity: 0.27,
-        shadowRadius: 4.65,
+    // btnDuvidoso:{
+    //     marginTop:20, 
+    //     marginBottom:20,
+    //     justifyContent:'center',
+    //     alignItems:'center',
+    //     backgroundColor:'#544F1F',
+    //     width:"70%",
+    //     height:35,
+    //     borderRadius:5,
+    //     shadowColor: "#000",
+    //     shadowOffset: {
+	//         width: 0,
+	//         height: 3,
+    //     },
+    //     shadowOpacity: 0.27,
+    //     shadowRadius: 4.65,
 
-        elevation: 6,
-    },
+    //     elevation: 6,
+    // },
 
     txtBtnG:{
         fontSize: 24,
@@ -191,7 +191,9 @@ export default StyleSheet.create({
 
  
     BottomColor :{
-       
+        flexDirection:'row',
+        justifyContent: 'space-around',
+        alignItems:'center',
         height: 50,
         position: 'absolute',
         bottom: 0,

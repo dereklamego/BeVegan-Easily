@@ -396,7 +396,11 @@ export default ({navigation}) => {
                 </Modalize>
             </View>
             {/*Footer da pagina */}
-            <View style={Estilo.BottomColor}></View>
+            <View style={Estilo.BottomColor}>
+            <MaterialCommunityIcons name="heart" size={30} color="white" />
+                <Feather name="search" size={30} color="white" />
+                <Feather name="user" size={30} color="white" />
+            </View>
         </SafeAreaView>
     )
 };
