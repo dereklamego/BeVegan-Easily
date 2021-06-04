@@ -20,12 +20,13 @@ export default ({navigation}) => {
             </View>
             <View >
                 
-                <Text style = {[estiloRecipe.txtTitle]}>Ingredientes</Text> 
 
                 <ScrollView style = {[estiloRecipe.SView]} showsVerticalScrollIndicator={false}> 
-                
+                <Text style = {[estiloRecipe.txtTitle]}>Ingredientes</Text> 
+
                     <View>
                     <>
+                    
                 <Text style = {[estiloRecipe.txtTitle]}>Recheio</Text>
                 
                 
@@ -45,25 +46,30 @@ export default ({navigation}) => {
                 
                 <Text style = {[estiloRecipe.txtTitle]}>MASSA</Text>
 
-                <Unorderedlist><Text>1 caixinha de grão-de-bico</Text></Unorderedlist>
-                <Unorderedlist><Text>20 ml de azeite</Text></Unorderedlist>
-                <Unorderedlist><Text>sal a gosto</Text></Unorderedlist>
-                <Unorderedlist><Text>3 g de cúrcuma</Text></Unorderedlist>
-                <Unorderedlist><Text>150 g de farinha de arroz</Text></Unorderedlist>
-                <Unorderedlist><Text>60 ml de água</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>1 caixinha de grão-de-bico</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>20 ml de azeite</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>sal a gosto</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>3 g de cúrcuma</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>150 g de farinha de arroz</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>60 ml de água</Text></Unorderedlist>
 
                 <Text style = {[estiloRecipe.txtTitle]}>MODO DE PREPARO</Text>
-                <Text>1. Para o recheio, refogue a cebola com azeite</Text>
-                <Text>2. Acrescente o palmito, a vagem, a cenoura e o orégano; cozinhe com a água até que fique ao dente. Tempere com sal e pimenta</Text>
-                <Text>3. Coloque o amido de milho dissolvido em um pouco de água, mexendo sempre até incorporar no recheio.</Text>
-                <Text>4. Acrescente a azeitona e desligue o fogo.</Text>
-                <Text>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.
+                <Text style = {[estiloRecipe.txtNormal]}>1. Para o recheio, refogue a cebola com azeite</Text>
+                <Text style = {[estiloRecipe.txtNormal]}>2. Acrescente o palmito, a vagem, a cenoura e o orégano; cozinhe com a água até que fique ao dente. Tempere com sal e pimenta</Text>
+                <Text style = {[estiloRecipe.txtNormal]}>3. Coloque o amido de milho dissolvido em um pouco de água, mexendo sempre até incorporar no recheio.</Text>
+                <Text style = {[estiloRecipe.txtNormal]}>4. Acrescente a azeitona e desligue o fogo.</Text>
+                <Text style = {[estiloRecipe.txtNormal]}>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.
                 
                 
                 
 
                 </Text>
                 </>
+                </View>
+                <View style={[Estilo.BtnContainer]}>
+                <TouchableOpacity style={[Estilo.btnDuvidoso]} title="Entrar">
+                <Text style={[Estilo.txtBtnG]}>Tabela Nutricional</Text>
+                </TouchableOpacity>
                 </View>
                 </ScrollView>
                 
