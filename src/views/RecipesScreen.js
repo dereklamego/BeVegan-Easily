@@ -47,13 +47,22 @@ export default class ListReceitas extends React.Component {
 
             {/*mapeamento para passar informações do array */}
             <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
-                {receitas.map(receitas=> (
+                {receitas.sort(function(receitasA, receitasB){
+                    
+                      if (receitasA.title == receitasB.title)
+                        return 0;
+                      if (receitasA.title < receitasB.title)
+                        return -1
+                      if (receitasA.title > receitasB.title)
+                        return 1
+                }) .map(receitas=>(
+                                       
                      <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes(receitas.src)}>
                      <View style={EstiloLocal.txtWrap}>
                          <Text style ={[Estilo.txtM]}>{receitas.title}</Text>
                      </View>
              </TouchableOpacity>
-                ))}
+    ))}
             </View>
 
             {/*Footer da pagina */}
