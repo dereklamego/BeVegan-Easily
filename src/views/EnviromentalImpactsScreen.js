@@ -21,7 +21,7 @@ export default ({navigation}) => {
             
             <View>
 
-                <ScrollView showsVerticalScrollIndicator={false} >
+                <ScrollView style = {[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
                     {/* <View style={[EstiloLocal.imgContainer]}> */}
                     <Image source={require('../img/deforestation.png')} style={[EstiloLocal.img]}/>
 

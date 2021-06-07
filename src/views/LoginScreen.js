@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Estilo from '../components/estilo'; 
 import FormLogin from '../components/FormLogin';
 import GlobalStyles from '../components/GlobalStyles';
-import {View, SafeAreaView,Text,TouchableOpacity,Image, Button} from 'react-native';
+import {View, SafeAreaView,Text,TouchableOpacity,Image, ScrollView} from 'react-native';
 
 export default ({navigation}) => {
     
@@ -13,6 +13,8 @@ export default ({navigation}) => {
     return(
         // Tag safeareaview não funcionou sem o estilo
         <SafeAreaView style={[Estilo.App, GlobalStyles.AndroidSafeArea]}> 
+        <ScrollView style = {[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
+
         {/* Padding na area total do app*/}
             <View style={[padding(20)]}>  
 
@@ -39,6 +41,7 @@ export default ({navigation}) => {
                     </TouchableOpacity> 
                 </View>  
             </View>
+            </ScrollView>
         </SafeAreaView>
     )  
 } 

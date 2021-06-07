@@ -5,6 +5,10 @@ const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
 
+    heightScroll:{
+        height:'85%'
+    },
+
     //Estilo para textos
     txtG:{
         fontSize: 32,
