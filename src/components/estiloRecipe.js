@@ -5,20 +5,31 @@ const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
     
+    subtTitles:{
+        marginBottom: 10,
+        marginTop: 10,
+        fontWeight:'bold',
+        fontSize: 18,
+        paddingLeft:10,
+        color:	'#544F1F',
+    },
+
     txt:{
         fontSize: 16,
-        justifyContent: 'center',
+        // justifyContent: 'center',
         color: '#544F1F',
-        margin: 10,
+        // margin: 10,
         textAlign: 'left',
     },
 
-    txtTitle:{
+    txtTitles:{
         fontSize: 22,
         fontWeight: "bold",
         color:	'#544F1F',
         marginBottom: 10,
-        marginLeft: 10
+        marginLeft: 10,
+        marginTop: 15,
+        textAlign: 'center'
     },
 
     //estilizar 
@@ -30,9 +41,9 @@ export default StyleSheet.create({
     },
 
     img:{
-        width: '100%',
-        height: '20%',
-        top:-10
+    maxWidth: '100%',
+    width: 'auto',
+    height: 220    
 
     },
 
@@ -50,7 +61,7 @@ export default StyleSheet.create({
         backgroundColor: 'white',
         marginTop:"-14%",
         paddingVertical:40,
-        paddingBottom:"140%"
+        // paddingBottom:"100%"
          
     },
 
@@ -71,7 +82,7 @@ export default StyleSheet.create({
       },
 
     SView:{
-        height: '80%',
+        height: '82%',
         
     },
 

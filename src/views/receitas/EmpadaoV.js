@@ -21,44 +21,48 @@ export default ({navigation}) => {
             <View >
                 
 
-                <ScrollView style = {[estiloRecipe.SView]} showsVerticalScrollIndicator={false}> 
-                <Text style = {[estiloRecipe.txtTitle]}>Ingredientes</Text> 
+                <ScrollView style = {[estiloRecipe.SView]} showsVerticalScrollIndicator={false}>
+                     
+                <Image source={require('../../img/imgRecipe/emapadaoV.jpeg')} style={[estiloRecipe.img]}/>
+                
+                <View style={[estiloRecipe.textContainer]}>
+                <Text style = {[estiloRecipe.txtTitles]}>Ingredientes</Text> 
 
                     <View>
                     <>
                     
-                <Text style = {[estiloRecipe.txtTitle]}>Recheio</Text>
+                <Text style = {[estiloRecipe.subtTitles]}>Recheio</Text>
                 
                 
                 {/* Estilizar texto de forma não manual */}
                 
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]} >240 g de palmito pupunha</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>50 g de vagem bem picadinha</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>1 lata de seleta de legumes</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>50 gramas de azeitona preta fatiada</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>100 g de cebola</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>30 ml de azeite</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>2 g de orégano</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>120 ml de água</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}> 1 colher(sopa) de amino de milho</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>sal a gosto</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>pimenta-do-reino a gosto</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]} >240 g de palmito pupunha</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>50 g de vagem bem picadinha</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 lata de seleta de legumes</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>50 gramas de azeitona preta fatiada</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>100 g de cebola</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>30 ml de azeite</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 g de orégano</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>120 ml de água</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}> 1 colher(sopa) de amino de milho</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>pimenta-do-reino a gosto</Text></Unorderedlist>
                 
-                <Text style = {[estiloRecipe.txtTitle]}>MASSA</Text>
+                <Text style = {[estiloRecipe.subtTitles]}>Massa</Text>
 
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>1 caixinha de grão-de-bico</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>20 ml de azeite</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>sal a gosto</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>3 g de cúrcuma</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>150 g de farinha de arroz</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txtNormal]}>60 ml de água</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 caixinha de grão-de-bico</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>20 ml de azeite</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>3 g de cúrcuma</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>150 g de farinha de arroz</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>60 ml de água</Text></Unorderedlist>
 
-                <Text style = {[estiloRecipe.txtTitle]}>MODO DE PREPARO</Text>
-                <Text style = {[estiloRecipe.txtNormal]}>1. Para o recheio, refogue a cebola com azeite</Text>
-                <Text style = {[estiloRecipe.txtNormal]}>2. Acrescente o palmito, a vagem, a cenoura e o orégano; cozinhe com a água até que fique ao dente. Tempere com sal e pimenta</Text>
-                <Text style = {[estiloRecipe.txtNormal]}>3. Coloque o amido de milho dissolvido em um pouco de água, mexendo sempre até incorporar no recheio.</Text>
-                <Text style = {[estiloRecipe.txtNormal]}>4. Acrescente a azeitona e desligue o fogo.</Text>
-                <Text style = {[estiloRecipe.txtNormal]}>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.
+                <Text style = {[estiloRecipe.txtTitles]}>MODO DE PREPARO</Text>
+                <Text style = {[estiloRecipe.txt]}>1. Para o recheio, refogue a cebola com azeite</Text>
+                <Text style = {[estiloRecipe.txt]}>2. Acrescente o palmito, a vagem, a cenoura e o orégano; cozinhe com a água até que fique ao dente. Tempere com sal e pimenta</Text>
+                <Text style = {[estiloRecipe.txt]}>3. Coloque o amido de milho dissolvido em um pouco de água, mexendo sempre até incorporar no recheio.</Text>
+                <Text style = {[estiloRecipe.txt]}>4. Acrescente a azeitona e desligue o fogo.</Text>
+                <Text style = {[estiloRecipe.txt]}>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.
                 
                 
                 
@@ -70,6 +74,7 @@ export default ({navigation}) => {
                 <TouchableOpacity style={[Estilo.btnDuvidoso]} title="Entrar">
                 <Text style={[Estilo.txtBtnG]}>Tabela Nutricional</Text>
                 </TouchableOpacity>
+                </View>
                 </View>
                 </ScrollView>
                 

@@ -49,11 +49,11 @@ export default class ListReceitas extends React.Component {
             <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
                 {receitas.sort(function(receitasA, receitasB){
                     
-                      if (receitasA.title == receitasB.title)
+                      if (receitasA.title.toUpperCase() == receitasB.title.toUpperCase())
                         return 0;
-                      if (receitasA.title < receitasB.title)
+                      if (receitasA.title.toUpperCase() < receitasB.title.toUpperCase())
                         return -1
-                      if (receitasA.title > receitasB.title)
+                      if (receitasA.title.toUpperCase() > receitasB.title.toUpperCase())
                         return 1
                 }) .map(receitas=>(
                                        
