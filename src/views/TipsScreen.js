@@ -19,7 +19,7 @@ export default ({ navigation }) => {
             </View>
             <ScrollView style={[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
                 {/* <View style={[EstiloLocal.imgContainer]}> */}
-                <Image source={require('../img/deforestation.png')} style={[EstiloLocal.img]} />
+                <Image source={require('../img/groceries.png')} style={[EstiloLocal.img]} />
 
                 <View style={EstiloLocal.titleContainer}>
                     <Text style={EstiloLocal.titlePage}>DICAS</Text>
@@ -131,7 +131,7 @@ const EstiloLocal = StyleSheet.create({
     // tem que botar a imagem alocada a tela toda de uma forma nao manual
     img: {
         width: '100%',
-        height: '15%',
+        height: '20%',
         top: -10
         /*  marginLeft:75,
          marginBottom: 15,
