@@ -1,48 +1,177 @@
 import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
-import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
+import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet, ScrollView } from 'react-native'
 import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 
-export default ({navigation}) => {
-    return(
+export default ({ navigation }) => {
+    return (
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
             {/*Header da pagina */}
-            <View style={[Estilo.HeadColor, {flexDirection:'row'}]}>
+            <View style={[Estilo.HeadColor, { flexDirection: 'row' }]}>
                 <TouchableOpacity onPress={() => navigation.goBack()}>
-                    <Text  style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>                        
-                </TouchableOpacity> 
+                    <Text style={[Estilo.txtBack, { textDecorationLine: 'underline' }]}>Voltar</Text>
+                </TouchableOpacity>
                 <View style={[Estilo.HeadAlign]}>
-                        <Text style={[Estilo.TextHead,{textAlign:'center'}]}> Dicas</Text>
+                    <Text style={Estilo.TextHead}> DICAS</Text>
                 </View>
             </View>
-            <ScrollView showsVerticalScrollIndicator={true} contentContainerStyle={styles.contentContainer}>
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>Lorem ipsum dolor sit amet</Text>  
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>1.Maecenas laoreet tempor ipsum et gravida. Quisque et est a odio viverra maximus. Sed condimentum semper sapien, ac ultricies tellus volutpat vitae. Mauris accumsan volutpat mauris, non posuere augue facilisis id. Duis ut erat ut turpis interdum vulputate ac vitae leo. Phasellus urna sapien, tincidunt sit amet sem sit amet, aliquet posuere libero. Nulla at tincidunt metus, vitae laoreet orci. Nunc vitae scelerisque tortor. Integer congue malesuada maximus. Aenean id est vitae nulla euismod lobortis vitae et nibh. Nunc auctor et libero a accumsan. Nulla faucibus quis neque ut mollis.</Text>
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>2.Duis quis ligula eros. Morbi blandit odio mi, quis pretium ligula faucibus vel. Ut et ultrices lorem. Fusce consectetur, mi sed ultricies ultrices, quam magna aliquet felis, id pharetra tellus mi vel tortor. Vestibulum vel vestibulum eros, quis auctor est. Quisque luctus porttitor nunc, eu mollis libero semper vitae. Nulla erat diam, aliquam id justo et, suscipit euismod lacus. In quis dolor arcu. In ut neque urna. Sed placerat, magna at vestibulum scelerisque, diam nisl mattis ligula, sit amet ullamcorper sem velit nec felis. </Text> 
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>3.Vestibulum dictum elementum sapien at maximus. Fusce tincidunt venenatis fermentum. Nulla fermentum, ipsum vel volutpat cursus, diam enim interdum lacus, eget feugiat ligula metus vitae enim. Integer nec nulla tincidunt, dapibus odio nec, rutrum urna. Pellentesque gravida lacus accumsan rhoncus laoreet. Nulla facilisi.</Text> 
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>4.Donec pretium nulla eget dolor eleifend, non vestibulum dui consequat. Vestibulum sit amet nunc id nunc faucibus convallis id quis dolor. Donec vulputate sed ligula sit amet ullamcorper. Cras mi nisi, suscipit vitae ex at, vulputate mattis ipsum. Duis iaculis massa scelerisque rutrum imperdiet. In ex elit, luctus eget sapien molestie, elementum placerat urna. Suspendisse sit amet nisl eget risus ultrices vestibulum vitae ut urna. Aliquam erat volutpat. </Text> 
-                <Text style={[Estilo.txtP,{color:'#ffff'}]}>5.Duis non facilisis risus. Aliquam tristique lorem vel neque cursus, dictum volutpat urna suscipit. Donec rutrum nulla non hendrerit ultricies. Vivamus auctor massa erat, in gravida magna lacinia eu. Nunc sagittis quam odio, et suscipit justo blandit eget. Praesent et arcu eu quam ornare pharetra. Nullam vestibulum imperdiet est in fermentum. Donec vitae lectus magna. </Text> 
-                {/* Armengue (tem que ser alterado depois) */}
-                <Text>sdasdashjdasdhasasdad</Text>
+            <ScrollView style={[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
+                {/* <View style={[EstiloLocal.imgContainer]}> */}
+                <Image source={require('../img/deforestation.png')} style={[EstiloLocal.img]} />
+
+                <View style={EstiloLocal.titleContainer}>
+                    <Text style={EstiloLocal.titlePage}>DICAS</Text>
+                </View>
+
+                {/* </View> */}
+                <View style={[EstiloLocal.textContainer]}>
+
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        1. PROCURE UM NUTRICIONISTA
+                        </Text>
+
+                    <Text style={[EstiloLocal.txt]}>
+                        É de extrema importância buscar ajuda de um especialista, pois só ele poderá fazer um plano alimentar vegano apropriado para você!
+                        </Text>
+
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        2. VOCÊ PRECISARÁ ENCONTRAR NOVAS FONTES DE PROTÉINA
+                        </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                        A carne é uma importante fonte de proteína, por isso, se você estiver pensando em seguir uma dieta vegana, é claro que vai precisar encontrar novas fontes de proteína.
+                        </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                        As proteínas são conhecidas como os blocos de construção da vida.
+                        Elas são constituídas de aminoácidos que ajudam no crescimento e reparo das células.
+                        Boas fontes de proteína vegana incluem lentilhas, soja natural e quinoa. Você deve tentar incorporar proteína em cada refeição, sempre que possível.
+                        </Text>
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        3. VOCÊ AINDA PODE COMER FORA
+                        </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                        Agora a maioria dos restaurantes tem seus próprios menus ou alternativas veganas, então não há motivos para não comer fora.
+                        Também existem restaurantes veganos, então por que não compartilhar sua experiência vegana com amigos e familiares?
+                    </Text>
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        4. COMECE A COZINHAR!
+                    </Text>
+
+                    <Text style={[EstiloLocal.txt]}>
+                        Infelizmente, a oferta de alimentos veganos ainda está aquém da demanda, e por isso, pode ser mais ou menos difícil se alimentar fora de casa, dependendo do local onde estiver.
+                        
+                    </Text>
+
+                    <Text style={[EstiloLocal.txt]}>
+                        Além disso, a cozinha vegana pode ser muito mais criativa e inventiva, além de muito saudável, se preparada por você.
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                        Escolha receitas de livros e sugestões online, mas não se prenda às receitas e aprenda a fazer suas adaptações.
+                        Provavelmente você não se tornará um chefe aclamado, mas tenho certeza que pensará duas vezes antes de pedir fast food pelo aplicativo.
+                    </Text>
+
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        5. BUSQUE POR FEIRAS VEGANAS
+                        </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                        ....
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+
+                    </Text>
+
+                    <Text style={[EstiloLocal.subtTitles]}>
+
+                    </Text>
+
+                    <Text style={[EstiloLocal.txt]}>
+
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+
+                    </Text>
+
+
+                </View>
             </ScrollView>
-            {/*Footer da pagina */}
-           <View style={Estilo.BottomColor}>
+            {/*Footer da  pagina */}
+            <View style={Estilo.BottomColor}>
                 <MaterialCommunityIcons name="heart" size={30} color="white" />
                 <Feather name="search" size={30} color="white" />
                 <Feather name="user" size={30} color="white" />
-           </View>
+            </View>
         </SafeAreaView>
     )
 }
+/*Estilização local*/
+const EstiloLocal = StyleSheet.create({
 
-{/*Estilização local do Scroll View  */}
-const styles = StyleSheet.create({
-    contentContainer: {
-      paddingVertical: 20,
-      marginBottom:20,
+    txt: {
+        fontSize: 16,
+        justifyContent: 'center',
+        color: '#544F1F',
+        margin: 10,
+        textAlign: 'left',
+    },
 
+    txtTitle: {
+        fontSize: 22,
+        fontWeight: "bold",
+        color: '#544F1F',
+        marginBottom: 10,
+        marginLeft: 10
+    },
+    // tem que botar a imagem alocada a tela toda de uma forma nao manual
+    img: {
+        width: '100%',
+        height: '15%',
+        top: -10
+        /*  marginLeft:75,
+         marginBottom: 15,
+         marginEnd: 50 */
+
+    },
+
+    imgContainer: {
+        width: '100%',
+        height: '50%',
+
+    },
+
+    textContainer: {
+        padding: 20,
+        height: "100%",
+        borderTopLeftRadius: 40,
+        borderTopRightRadius: 40,
+        backgroundColor: 'white',
+        marginTop: "-14%",
+        paddingVertical: 40,
+        paddingBottom: "140%"
+    },
+    titleContainer: {
+        padding: 20,
+        color: 'white',
+        position: 'absolute',
+        marginTop: 50
+    },
+    titlePage: {
+        lineHeight: 70,
+        color: 'white',
+        fontSize: 40,
+        fontWeight: 'bold'
+    },
+    subtTitles: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        paddingLeft: 10,
+        color: '#544F1F',
     }
 
-  })
+})

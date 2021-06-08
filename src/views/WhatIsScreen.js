@@ -2,8 +2,9 @@ import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
-import { Video, AVPlaybackStatus } from 'expo-av'
-import YouTube from 'react-native-youtube';
+
+import YoutubePlayer from 'react-native-youtube-iframe';
+
 
 export default ({navigation}) => {
     const video = React.useRef(null);
@@ -41,30 +42,12 @@ export default ({navigation}) => {
                         alimentos e produtos de origem animal ou que tenham causado algum tipo de sofrimento aos animais.
                     </Text>
                     
-                    <View style={[EstiloLocal.container]}>
-                    <YouTube
-  videoId="KVZ-P-ZI6W4"   // The YouTube video ID
-  play={true}             // control playback of video with true/false
-  fullscreen={true}       // control whether the video should play in fullscreen or inline
-  loop={true}             // control whether the video should loop when ended
-
-  onReady={e => this.setState({ isReady: true })}
-  onChangeState={e => this.setState({ status: e.state })}
-  onChangeQuality={e => this.setState({ quality: e.quality })}
-  onError={e => this.setState({ error: e.error })}
-
-  style={{ alignSelf: 'stretch', height: 300 }}
-/>
-                    {/* <Video
-                        ref={video}
-                        style={[EstiloLocal.video]}
-                        source={{uri: 'https://www.youtube.com/watch?v=q3P1XfANIsQ&t=128s'}}
-                        useNativeControls
-                        resizeMode="contain"
-                        isLooping
-                        onPlaybackStatusUpdate={status => setStatus(() => status)}
-                    /> */}
-                  
+                    <View>
+                        <YoutubePlayer
+                                height={200}
+                                play={true}
+                                videoId={'q3P1XfANIsQ'}
+                        />
                     </View>
                     <Text style={[EstiloLocal.txt]}>
                         Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
@@ -100,7 +83,7 @@ export default ({navigation}) => {
                     </Text>
                     
                     <Text style={[EstiloLocal.txtTitle]}> Vegetarianismo e Veganismo são a mesma coisa ?</Text>
-
+                
                     <Text style = {[EstiloLocal.txt]}>
                     Ao contrário do veganismo o vegetarianismo é o regime alimentar que exclui os produtos de origem animal
                     ou seja se restringe a alimentação,  o veganismo como vimos é algo mais abrangente. 
@@ -168,9 +151,10 @@ const EstiloLocal= StyleSheet.create({
 
         container: {
             flex: 1,
+           
             justifyContent: 'center',
             backgroundColor: '#ecf0f1',
-          },
+        },
           video: {
             alignSelf: 'center',
             width: 320,

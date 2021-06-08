@@ -18,9 +18,6 @@ export default ({navigation}) => {
                         <Text style={Estilo.TextHead}> Impactos Ambientais</Text>
                 </View>
             </View> 
-            
-            <View>
-
                 <ScrollView style = {[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
                     {/* <View style={[EstiloLocal.imgContainer]}> */}
                     <Image source={require('../img/deforestation.png')} style={[EstiloLocal.img]}/>
@@ -95,7 +92,6 @@ export default ({navigation}) => {
                        
                     </View>
                 </ScrollView>
-            </View>
             {/*Footer da  pagina */}
             <View style={Estilo.BottomColor}>
                 <MaterialCommunityIcons name="heart" size={30} color="white" />

@@ -19,6 +19,7 @@ export default ({navigation}) => {
     const [origin, setOrigin] = useState(null);
 
     const modalizeRef = useRef(null);
+
     let cardId=null;
     let modalList =[];
     //Lugares adicionados em um array
@@ -191,6 +192,7 @@ export default ({navigation}) => {
     const [mediaUrl,setMediaUrl] = useState(null)
     const [telModal,setTel] = useState(null)
     let placeModal;
+    
     onOpen = (param)=>{
         placeModal = this.state.places[param-1];
         setTitulo(placeModal.title)
