@@ -14,7 +14,7 @@ export default ({ navigation }) => {
                     <Text style={[Estilo.txtBack, { textDecorationLine: 'underline' }]}>Voltar</Text>
                 </TouchableOpacity>
                 <View style={[Estilo.HeadAlign]}>
-                    <Text style={Estilo.TextHead}> DICAS QUE PODEM TE AUXILIAR</Text>
+                    <Text style={Estilo.TextHead}> DICAS</Text>
                 </View>
             </View>
             <ScrollView style={[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
@@ -22,7 +22,7 @@ export default ({ navigation }) => {
                 <Image source={require('../img/deforestation.png')} style={[EstiloLocal.img]} />
 
                 <View style={EstiloLocal.titleContainer}>
-                    <Text style={EstiloLocal.titlePage}>IMPACTOS AMBIENTAIS E O VEGANISMO</Text>
+                    <Text style={EstiloLocal.titlePage}>DICAS</Text>
                 </View>
 
                 {/* </View> */}
