@@ -62,16 +62,17 @@ export default ({navigation}) => {
                 <Text style = {[estiloRecipe.txt]}>2. Acrescente o palmito, a vagem, a cenoura e o orégano; cozinhe com a água até que fique ao dente. Tempere com sal e pimenta</Text>
                 <Text style = {[estiloRecipe.txt]}>3. Coloque o amido de milho dissolvido em um pouco de água, mexendo sempre até incorporar no recheio.</Text>
                 <Text style = {[estiloRecipe.txt]}>4. Acrescente a azeitona e desligue o fogo.</Text>
-                <Text style = {[estiloRecipe.txt]}>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.
+                <Text style = {[estiloRecipe.txt]}>5. No processador, coloque o grão-de-bico, o azeite, sal, água e a cúrcuma; processe para misturar.</Text>
+                <Text style = {[estiloRecipe.txt]}>6.Na tigela com a farinha de arroz, adicione a mistura e mexa com a ajuda das mãos até formar uma massa firme.</Text>
+                <Text style = {[estiloRecipe.txt]}>7. Forre o fundo de pequenos recipientes com parte da massa.</Text>
+                <Text style = {[estiloRecipe.txt]}>8. Coloque o recheio.</Text>
+                <Text style = {[estiloRecipe.txt]}>9. Cubra com uma outra parte da massa.</Text>
+                <Text style = {[estiloRecipe.txt]}>10. Leve ao forno preaquecido a 180° C por aproximadamente 30 minutos.</Text>
                 
-                
-                
-
-                </Text>
                 </>
                 </View>
                 <View style={[Estilo.BtnContainer]}>
-                <TouchableOpacity style={[Estilo.btnDuvidoso]} title="Entrar">
+                <TouchableOpacity style={[estiloRecipe.btnRecipe]} title="Entrar">
                 <Text style={[Estilo.txtBtnG]}>Tabela Nutricional</Text>
                 </TouchableOpacity>
                 </View>
@@ -84,4 +85,3 @@ export default ({navigation}) => {
             </SafeAreaView>
     )
 }
-

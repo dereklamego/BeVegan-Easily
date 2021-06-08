@@ -5,6 +5,26 @@ const windowHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
     
+    btnRecipe:{
+        backgroundColor: '#E58A00',
+        width: '70%',
+        height: 50,
+        borderRadius: 10,
+        justifyContent:'center',
+        alignItems:'center',
+        shadowColor: "#000",
+        marginTop: 30,
+        marginBottom: 30,
+        shadowOffset: {
+	        width: 0,
+	        height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
+
+        elevation: 6,
+    },
+
     subtTitles:{
         marginBottom: 10,
         marginTop: 10,
