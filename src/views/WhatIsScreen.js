@@ -2,8 +2,7 @@ import React from 'react';
 import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
-import { Video, AVPlaybackStatus } from 'expo-av';
-import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
+import { Video, AVPlaybackStatus } from 'expo-av'
 
 export default ({navigation}) => {
     const video = React.useRef(null);
@@ -18,7 +17,7 @@ export default ({navigation}) => {
                     <Text  style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>                        
                 </TouchableOpacity> 
                 <View style={[Estilo.HeadAlign]}>
-                        <Text style={[Estilo.TextHead,{textAlign:'center'}]}> O que é Veganismo</Text>
+                        <Text style={[Estilo.TextHead,{textAlign:'center'}]}> O que é ?</Text>
                 </View>
             </View>
 
@@ -45,9 +44,7 @@ export default ({navigation}) => {
                     <Video
                         ref={video}
                         style={[EstiloLocal.video]}
-                        source={{
-                        uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-                        }}
+                        source={{uri: 'https://youtu.be/q3P1XfANIsQ',}}
                         useNativeControls
                         resizeMode="contain"
                         isLooping
@@ -91,17 +88,14 @@ export default ({navigation}) => {
                     <Text style={[EstiloLocal.txtTitle]}> Vegetarianismo e Veganismo são a mesma coisa ?</Text>
 
                     <Text style = {[EstiloLocal.txt]}>
-                    Não o Vegetarianismo é o regime alimentar que exclui os produtos de origem animal... terminar essa parte
+                    Ao contrário do veganismo o vegetarianismo é o regime alimentar que exclui os produtos de origem animal
+                    ou seja se restringe a alimentação,  o veganismo como vimos é algo mais abrangente. 
                     </Text>
                 
                 </View>
             </ScrollView>
             {/*Footer da pagina */}
-            <View style={Estilo.BottomColor}>
-                <MaterialCommunityIcons name="heart" size={30} color="white" />
-                <Feather name="search" size={30} color="white" />
-                <Feather name="user" size={30} color="white" />
-            </View>
+            <View style={Estilo.BottomColor}></View>
         </SafeAreaView>
     )
 }
