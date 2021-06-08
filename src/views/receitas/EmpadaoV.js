@@ -1,11 +1,20 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Estilo from '../../components/estilo';
 import GlobalStyles from '../../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
 import Unorderedlist from 'react-native-unordered-list';
-import estiloRecipe from '../../components/estiloRecipe'
+import estiloRecipe from '../../components/estiloRecipe';
+import {Modalize} from 'react-native-modalize';
+
 
 export default ({navigation}) => {
+
+    const modalizeRef = useRef(null);
+
+    onOpen = () =>{
+        modalizeRef.current?.open()
+    }
+
     return(
         //conteudo da pagina
         <SafeAreaView style={[Estilo.AppPrincipal, GlobalStyles.AndroidSafeArea]}>
@@ -44,7 +53,7 @@ export default ({navigation}) => {
                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>30 ml de azeite</Text></Unorderedlist>
                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 g de orégano</Text></Unorderedlist>
                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>120 ml de água</Text></Unorderedlist>
-                <Unorderedlist><Text style = {[estiloRecipe.txt]}> 1 colher(sopa) de amino de milho</Text></Unorderedlist>
+                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher(sopa) de amido de milho</Text></Unorderedlist>
                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>pimenta-do-reino a gosto</Text></Unorderedlist>
                 
@@ -68,17 +77,32 @@ export default ({navigation}) => {
                 <Text style = {[estiloRecipe.txt]}>8. Coloque o recheio.</Text>
                 <Text style = {[estiloRecipe.txt]}>9. Cubra com uma outra parte da massa.</Text>
                 <Text style = {[estiloRecipe.txt]}>10. Leve ao forno preaquecido a 180° C por aproximadamente 30 minutos.</Text>
-                
+
                 </>
                 </View>
                 <View style={[Estilo.BtnContainer]}>
-                <TouchableOpacity style={[estiloRecipe.btnRecipe]} title="Entrar">
+                <TouchableOpacity style={[estiloRecipe.btnRecipe]} onPress={()=>this.onOpen()} title="Entrar">
                 <Text style={[Estilo.txtBtnG]}>Tabela Nutricional</Text>
                 </TouchableOpacity>
                 </View>
                 </View>
                 </ScrollView>
-                
+                <Modalize 
+                    ref={modalizeRef}
+                    snapPoint={500}
+                    modalHeight={500}
+                > 
+                    <View 
+                        style={{ 
+                            height:500,
+                        }}>
+
+                         <>
+                         <Text style = {[estiloRecipe.txtTitles]}>Tabela Nutricional</Text>
+                         </>
+
+                            </View>
+                            </Modalize>
               
             </View>
             <View style={Estilo.BottomColor}></View>

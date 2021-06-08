@@ -3,6 +3,7 @@ import Estilo from '../components/estilo';
 import GlobalStyles from '../components/GlobalStyles';
 import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollView} from 'react-native'
 import { Video, AVPlaybackStatus } from 'expo-av'
+import YouTube from 'react-native-youtube';
 
 export default ({navigation}) => {
     const video = React.useRef(null);
@@ -41,15 +42,28 @@ export default ({navigation}) => {
                     </Text>
                     
                     <View style={[EstiloLocal.container]}>
-                    <Video
+                    <YouTube
+  videoId="KVZ-P-ZI6W4"   // The YouTube video ID
+  play={true}             // control playback of video with true/false
+  fullscreen={true}       // control whether the video should play in fullscreen or inline
+  loop={true}             // control whether the video should loop when ended
+
+  onReady={e => this.setState({ isReady: true })}
+  onChangeState={e => this.setState({ status: e.state })}
+  onChangeQuality={e => this.setState({ quality: e.quality })}
+  onError={e => this.setState({ error: e.error })}
+
+  style={{ alignSelf: 'stretch', height: 300 }}
+/>
+                    {/* <Video
                         ref={video}
                         style={[EstiloLocal.video]}
-                        source={{uri: 'https://youtu.be/q3P1XfANIsQ',}}
+                        source={{uri: 'https://www.youtube.com/watch?v=q3P1XfANIsQ&t=128s'}}
                         useNativeControls
                         resizeMode="contain"
                         isLooping
                         onPlaybackStatusUpdate={status => setStatus(() => status)}
-                    />
+                    /> */}
                   
                     </View>
                     <Text style={[EstiloLocal.txt]}>
