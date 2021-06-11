@@ -26,6 +26,10 @@ export default ({navigation}) => {
             <ScrollView showsVerticalScrollIndicator={false} >
                 {/* <View style={[EstiloLocal.imgContainer]}> */}
                     <Image source={require('../img/Whatisss.jpg')} style={[EstiloLocal.img]}/>
+
+                    <View style={EstiloLocal.titleContainer}>
+                        <Text  style={EstiloLocal.titlePage}>VOCÊ SABE O QUE É VEGANISMO?</Text>
+                    </View>
                 {/* </View> */}
                 <View style={[EstiloLocal.textContainer]}>
                 
@@ -45,10 +49,11 @@ export default ({navigation}) => {
                     <View>
                         <YoutubePlayer
                                 height={200}
-                                play={true}
+                                play={false}
                                 videoId={'q3P1XfANIsQ'}
                         />
                     </View>
+                    
                     <Text style={[EstiloLocal.txt]}>
                         Por isso, o vegano também exclui da sua dieta os laticínios, ovos e mel. Além de não utilizar
                         nenhum tipo de produto de origem animal, seja de higiene, cosméticos, vestuário, medicinais, entre outros.
@@ -165,7 +170,19 @@ const EstiloLocal= StyleSheet.create({
             justifyContent: 'center',
             alignItems: 'center',
           },
-
+          
+        titleContainer:{
+            padding:20,
+            color:'white',
+            position:'absolute',
+            marginTop:50
+        },
+        titlePage:{
+            lineHeight: 70,
+            color:'white',
+            fontSize:40,
+            fontWeight:'bold'
+        },
             
 
 

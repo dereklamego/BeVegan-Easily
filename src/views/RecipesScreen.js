@@ -5,30 +5,11 @@ import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollVie
 import receitas from '../views/RecipesTable';
 
 export default class ListReceitas extends React.Component {
-    //   n = new receitas();
-    // onRecipes = (receitas) =>{
-    //     this.props.navigation.navigate('idpage', {nav: receitas.index});
-    // };
 
     onRecipes = (receitas) =>{
         this.props.navigation.navigate(receitas);
-        console.warn(receitas)
     };
     
-    //array para as receitas;
-    
-    //     receitas = [
-    //     {
-    //         id: 1,
-    //         title: 'pao',
-    //     },
-    //     {   
-    //         id: 2,
-    //         title: 'Macarrão'
-    //     }
-
-    // ]
-
     render(){
     return(
         //conteudo da pagina
@@ -44,27 +25,27 @@ export default class ListReceitas extends React.Component {
                 </View>
                 
             </View>
-
-            {/*mapeamento para passar informações do array */}
-            <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
-                {receitas.sort(function(receitasA, receitasB){
-                    
-                      if (receitasA.title.toUpperCase() == receitasB.title.toUpperCase())
-                        return 0;
-                      if (receitasA.title.toUpperCase() < receitasB.title.toUpperCase())
-                        return -1
-                      if (receitasA.title.toUpperCase() > receitasB.title.toUpperCase())
-                        return 1
-                }) .map(receitas=>(
-                                       
-                     <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes(receitas.src)}>
-                     <View style={EstiloLocal.txtWrap}>
-                         <Text style ={[Estilo.txtM]}>{receitas.title}</Text>
-                     </View>
-             </TouchableOpacity>
-    ))}
-            </View>
-
+            <ScrollView style={[ EstiloLocal.containerScroll]}>
+                {/*mapeamento para passar informações do array */}
+                <View style={[Estilo.BtnContainer, EstiloLocal.BtnContainer]}>
+                    {receitas.sort(function(receitasA, receitasB){
+                        
+                        if (receitasA.title.toUpperCase() == receitasB.title.toUpperCase())
+                            return 0;
+                        if (receitasA.title.toUpperCase() < receitasB.title.toUpperCase())
+                            return -1
+                        if (receitasA.title.toUpperCase() > receitasB.title.toUpperCase())
+                            return 1
+                    }) .map(receitas=>(
+                                        
+                        <TouchableOpacity key={receitas.id} style={EstiloLocal.Btn} onPress={() => this.onRecipes(receitas.src)}>
+                        <View style={EstiloLocal.txtWrap}>
+                            <Text style ={[Estilo.txtM]}>{receitas.title}</Text>
+                        </View>
+                        </TouchableOpacity>
+        ))}
+                </View>
+            </ScrollView>
             {/*Footer da pagina */}
             <View style={Estilo.BottomColor}></View>
         </SafeAreaView>
@@ -93,12 +74,13 @@ const EstiloLocal = StyleSheet.create({
         shadowOpacity: 0.27,
         shadowRadius: 4.65,
         elevation: 6,
+        marginTop: "20%"
     },
     BtnContainer:{
-        height:'85%',
-        //  flex:1,
+        height:'95%',
+        //flex:1,
         justifyContent: 'space-evenly',
-        
+ 
     },
     img:{
         width:141,
@@ -118,5 +100,8 @@ const EstiloLocal = StyleSheet.create({
         width: '60%',
         alignItems:"center",
         justifyContent: 'center'
+    },
+    containerScroll:{
+        flex: 1,
     }
 })
