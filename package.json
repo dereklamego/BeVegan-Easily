@@ -29,10 +29,7 @@
     "react-native-screens": "~3.0.0",
     "react-native-unordered-list": "^1.0.4",
     "react-native-web": "~0.13.12",
-<<<<<<< HEAD
-=======
     "react-native-webview": "^11.2.3",
->>>>>>> 25678ff950a1e8a3c8e5f16c73dcd0512722049a
     "react-native-youtube": "^2.0.1",
     "react-native-youtube-iframe": "^2.1.0"
   },

@@ -43,7 +43,7 @@ export default ({navigation}) => {
                         <Text style={[EstiloLocal.txt]}>
                             Atualmente segundo a Food and Agriculture Organization (FAO), órgão vinculado à ONU, o rebanho mundial é composto por cerca de 1,22 bilhões de cabeças de gado, 19 bilhões de frangos, e por volta de 980 milhões de porcos, que consomen milhões de recursos todos os dias.
                         </Text>
-                        <Text style={[EstiloLocal.txt,{fontWeight:'bold'}]}>-Alto consumo de recursos hídricos</Text>
+                        <Text style={[EstiloLocal.txt,EstiloLocal.subsubTitle]}>Alto consumo de recursos hídricos</Text>
                         <Text style={[EstiloLocal.txt]}>
                              70% de toda a água consumida no mundo é usada na irrigação das lavouras, na pecuária e na aquicultura. A indústria responde pelo consumo de quase 20% e as residências, 12%. No Brasil, um dos maiores protagonistas nessa indústria, e que consome 20% de todo o agrotóxico do mundo só pra suprir essas demandas, usa 72% da água só pra agropecuária.
                         </Text>
@@ -52,7 +52,7 @@ export default ({navigation}) => {
                              A conta matemática realizada leva em consideração a quantidade de água usada na produção dos alimentos que os bois comem, da água que eles bebem, até mesma da água utilizada na limpeza dos currais onde ficam.
                         </Text>
 
-                        <Text style={[EstiloLocal.txt,{fontWeight:'bold'}]}> -Desmatamento </Text>
+                        <Text style={[EstiloLocal.txt,EstiloLocal.subsubTitle]}>Desmatamento </Text>
                         
                         <Text style={[EstiloLocal.txt]}>
                             Segundo a Mapbiomas, a agropecuária foi responsável por 90% da perda de vegetação natural do Brasil entre os anos 1985 e 2019, equivalente a 10,25% do território nacional.
@@ -65,7 +65,7 @@ export default ({navigation}) => {
                         <Text style={[EstiloLocal.txt]}>
                             Hoje no mundo, cerca de 122,647 milhões de hectares são desstinadas a plantação de soja. Onde cerca de 79% é esmagada para fazer ração animal e 18% para produção de óleo de soja. A demanda por carne tem aumentado a cada dia. Por isso, a demanda por soja para alimentar o gado também.
                         </Text>
-                        <Text style={[EstiloLocal.txt,{fontWeight:'bold'}]}>-Emissão de gases  </Text>
+                        <Text style={[EstiloLocal.txt, EstiloLocal.subsubTitle]}>Emissão de gases  </Text>
                         <Text style={[EstiloLocal.txt]}>
                             No brasil, a agropecuária emitiu 598,7 milhões de toneladas de CO2 e em 2019, um aumento de 1,1% em relação às 592,3 milhões de toneladas emitidas em 2018. As emissões diretas do setor, fortemente ligadas ao rebanho bovino, representaram 28% do total de gases de efeito estufa do Brasil. As emissões de uso da terra representaram 44% do total nacional. Somados, os dois setores concentram 72% das emissões brasileiras.
                         </Text>
@@ -163,6 +163,10 @@ const EstiloLocal= StyleSheet.create({
             fontSize: 18,
             paddingLeft:10,
             color:	'#544F1F',
+        },
+        subsubTitle:{
+            fontSize:17,
+            fontWeight:'bold',
         }
 
 })

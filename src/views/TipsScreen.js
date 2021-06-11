@@ -22,34 +22,40 @@ export default ({ navigation }) => {
                 <Image source={require('../img/groceries.png')} style={[EstiloLocal.img]} />
 
                 <View style={EstiloLocal.titleContainer}>
-                    <Text style={EstiloLocal.titlePage}>DICAS</Text>
+                    <Text style={EstiloLocal.titlePage}>DICAS IMPORTANTES</Text>
                 </View>
 
                 {/* </View> */}
                 <View style={[EstiloLocal.textContainer]}>
+                    <Text style={[EstiloLocal.firstTitle]}>
+                        Um fácil início 
+                    </Text>
+                    <Text style={[EstiloLocal.txt]}>
+                       Não deixe de ver essas importantíssimas dicas que separamos para você e irão te ajudar na mudança de seu estilo de vida:
+                    </Text> 
 
                     <Text style={[EstiloLocal.txtTitle]}>
                         1. PROCURE UM NUTRICIONISTA
-                        </Text>
+                    </Text>
 
                     <Text style={[EstiloLocal.txt]}>
                         É de extrema importância buscar ajuda de um especialista, pois só ele poderá fazer um plano alimentar vegano apropriado para você!
-                        </Text>
+                    </Text>
 
                     <Text style={[EstiloLocal.txtTitle]}>
                         2. VOCÊ PRECISARÁ ENCONTRAR NOVAS FONTES DE PROTÉINA
-                        </Text>
+                    </Text>
                     <Text style={[EstiloLocal.txt]}>
                         A carne é uma importante fonte de proteína, por isso, se você estiver pensando em seguir uma dieta vegana, é claro que vai precisar encontrar novas fontes de proteína.
-                        </Text>
+                    </Text>
                     <Text style={[EstiloLocal.txt]}>
                         As proteínas são conhecidas como os blocos de construção da vida.
                         Elas são constituídas de aminoácidos que ajudam no crescimento e reparo das células.
                         Boas fontes de proteína vegana incluem lentilhas, soja natural e quinoa. Você deve tentar incorporar proteína em cada refeição, sempre que possível.
-                        </Text>
+                    </Text>
                     <Text style={[EstiloLocal.txtTitle]}>
                         3. VOCÊ AINDA PODE COMER FORA
-                        </Text>
+                    </Text>
                     <Text style={[EstiloLocal.txt]}>
                         Agora a maioria dos restaurantes tem seus próprios menus ou alternativas veganas, então não há motivos para não comer fora.
                         Também existem restaurantes veganos, então por que não compartilhar sua experiência vegana com amigos e familiares?
@@ -122,6 +128,13 @@ const EstiloLocal = StyleSheet.create({
     },
 
     txtTitle: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: '#544F1F',
+        marginBottom: 10,
+        marginLeft: 10
+    },
+    firstTitle:{
         fontSize: 22,
         fontWeight: "bold",
         color: '#544F1F',
