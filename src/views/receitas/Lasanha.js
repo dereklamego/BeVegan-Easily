@@ -43,28 +43,40 @@ export default ({navigation}) => {
                                 
                                 {/* Estilizar texto de forma não manual */}
                                 
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1/2 cebola ralada</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1/2 lata de água (usar a medida da lata do milho)</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 lata de milho</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 dentes de alho</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>4 colheres de azeite</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>8 colher de farinha de trigo</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>farinha de rosca para empanar</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>temperos a gosto</Text></Unorderedlist>
-
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 caixinha de massa de lasanha sem ovos (eu costumo usar 12 folhas da massa)</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 caixinhas de molho de tomate (dá mais ou menos 1 kg de molho)</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 cebola pequena</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>4 dentes de alho</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 abobrinha italiana pequena</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 berinjelas pequenas </Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>3 colheres (sopa) rasas de sal</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher (café) rasa de curry</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher (café) rasa páprica picante</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres (sobremesa) rasas de orégano</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 maço pequeno de cheiro verde</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher (café) rasa de açúcar</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 palmitos</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>10 castanhas-do-pará</Text></Unorderedlist>
 
                                 <Text style = {[estiloRecipe.txtTitles]}>MODO DE PREPARO</Text>
-                                <Text style = {[estiloRecipe.txt]}>1. Leve a cebola e o alho para dourar no azeite..</Text>
-                                <Text style = {[estiloRecipe.txt]}>2. Bata o milho e a água no liquidificador e acrescente os temperos e sal.</Text>
-                                <Text style = {[estiloRecipe.txt]}>3. Leve a mistura para a panela junto com o alho e a cebola dourados e deixe ferver.</Text>
-                                <Text style = {[estiloRecipe.txt]}>4. Acrescente a farinha de trigo e misture até ficar homogêneo..</Text>
-                                <Text style = {[estiloRecipe.txt]}>5. Diminua o fogo e mexa a mistura até que a massa desgrude da panela.</Text>
-                                <Text style = {[estiloRecipe.txt]}>6. Deixe a mistura esfriar completamente antes de usar.</Text>
-                                <Text style = {[estiloRecipe.txt]}>7.Usando uma colher cheia como medida, faça o formato de um nugget com a massa - se preferir, recheie a massa e empane em farinha de trigo.</Text>
-                                <Text style = {[estiloRecipe.txt]}>8.Disponha numa assadeira e leve para o forno preaquecido a 180º C por 1 hora ou até que estejam completamente dourados</Text>
-                                <Text style = {[estiloRecipe.txt]}>9.Vire na metade do tempo para dourar dos 2 lados por igual ou frite em óleo bem quente.</Text>
-                                <Text style = {[estiloRecipe.txt]}>9.Espere esfriar completamente antes de consumir.</Text>
+
+                                <Text style = {[estiloRecipe.txt]}>1. Pique a cebola e os dentes de alho em pedaços bem pequenos e reserve.</Text>
+                                <Text style = {[estiloRecipe.txt]}>2. Rale a abobrinha e reserve. Corte as beringelas em rodelas bem finas e reserve.</Text>
+                                <Text style = {[estiloRecipe.txt]}>3. Em uma panela grande coloque as 3 colheres de óleo e a cebola picada e refogue, Antes de ficar amarela, coloque o alho e refogue rapidamente, antes que fique amarelo.</Text>
+                                <Text style = {[estiloRecipe.txt]}>4. Coloque a abobrinha e mexa até começar a soltar água. Coloque 1 das colheres de sal, o curry, a páprica picante e o orégano. </Text>
+                                <Text style = {[estiloRecipe.txt]}>5. Mexa bem, adicione as 2 caixinhas de molho de tomate e adicione o restante do sal e o açúcar..</Text>
+                                <Text style = {[estiloRecipe.txt]}>6. Mexa bem, feche a panela e deixe ferver, Enquanto isso, pique o maço de cheiro verde (umas 15 folhas de cebolinha e umas 10 folhas de salsinha) em pedaços bem pequenos..</Text>
+                                <Text style = {[estiloRecipe.txt]}>7.Pique também o palmito em rodelas e depois em quatro. Reserve. Desligue o molho e adicione o palmito e o cheiro verde (isso deve demorar uns 5 minutos). Coloque um fio de óleo numa frigideira e frite rapidamente as fatias de berinjelas. Não precisa fritar muito já que a berinjela vai cozinhar no forno. Faça isso até fritar todas as fatias.</Text>
+                                <Text style = {[estiloRecipe.txt]}>8.Procure deixar as fatias do mesmo tamanho para que o cozimento seja igual.</Text>
+                                <Text style = {[estiloRecipe.txt]}>9.Antes da montagem pré-aqueça o forno a 180ºC.</Text>
+                                
+
+                                <Text style = {[estiloRecipe.txtTitles]}>MONTAGEM</Text>
+
+                                <Text style = {[estiloRecipe.txt]}>1. Forre a forma com o molho e coloque 4 folhas da massa da lasanha. Distribua em cima dessa massa as fatias de berinjela. Jogue mais molho em cima da berinjela. Repita o processo mais 2 vezes.</Text>
+                                <Text style = {[estiloRecipe.txt]}>2. Se desejar, coloque as castanhas-do-pará no liquidificador e triture. Jogue por cima da lasanha, para substituir o queijo parmesão, por exemplo.</Text>
+                                <Text style = {[estiloRecipe.txt]}>3. A forma que eu uso mede 15cm x 30 cm. Deixe no forno a 230ºC por cerca de 40 minutos..</Text>
+                                <Text style = {[estiloRecipe.txt]}>4. É importante colocar bastante molho para que as folhas da massa cozinhem..</Text>
                             </>
                         </View>
                             <View style={[Estilo.BtnContainer]}>

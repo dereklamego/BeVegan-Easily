@@ -43,7 +43,7 @@ export default ({navigation}) => {
                                 
                                 {/* Estilizar texto de forma não manual */}
                                 
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]} >3 colheres de farinha de trigo integral</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>3 colheres de farinha de trigo integral</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>Sal a gosto</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres de amido de batata dissolvido em 3 colheres (sopa) de água (substituindo 1 ovo)</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres de levedura nutricional (substituindo o queijo ralado)</Text></Unorderedlist>
@@ -60,7 +60,7 @@ export default ({navigation}) => {
 
                                 <Text style = {[estiloRecipe.txtTitles]}>MODO DE PREPARO</Text>
                                 <Text style = {[estiloRecipe.txt]}>1. Com exceção do arroz, misture todos os ingredientes acima muito bem e então adicione o arroz no final.</Text>
-                                <Text style = {[estiloRecipe.txt]}>2.Misture bem novamente. Frite em óleo quente a colheradas. Eu usei óleo de canola numa panela de ferro.</Text>
+                                <Text style = {[estiloRecipe.txt]}>2. Misture bem novamente. Frite em óleo quente a colheradas. Eu usei óleo de canola numa panela de ferro.</Text>
                                 <Text style = {[estiloRecipe.txt]}>3. Minha mãe enrola cada bolinho na mão e passa na farinha de rosca (ou de pão) antes de fritar. Também fica delicioso.</Text>
                             
                             </>

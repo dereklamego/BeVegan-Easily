@@ -43,12 +43,12 @@ export default ({navigation}) => {
                                 
                                 {/* Estilizar texto de forma não manual */}
                                 
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]} >1 xícara de grão-de-bico (já deixado de molho na água de um dia para o outro)</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 xícara de grão-de-bico (já deixado de molho na água de um dia para o outro)</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres (sopa) de aveia em flocos</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher (sopa) de cúrcuma</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 xícaras de água</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>cebolinha, salsinha, gergelim, cebola picada e outras ervas a gosto</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>Cebolinha, salsinha, gergelim, cebola picada e outras ervas a gosto</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>Sal a gosto</Text></Unorderedlist>
                                 
                                 
 
@@ -58,10 +58,10 @@ export default ({navigation}) => {
                                 <Text style = {[estiloRecipe.txt]}>3. Transfira a massa para outro recipiente, acrescente o restante dos ingredientes, temperos, o sal na quantidade que preferir e misture bem.</Text>
                                 <Text style = {[estiloRecipe.txt]}>4. Coloque uma frigideira no fogo baixo, de preferência com teflon ou a que você possua que grude menos. Coloque apenas 1 fio de óleo para untar.</Text>
                                 <Text style = {[estiloRecipe.txt]}>5. Despeje a quantidade de massa na frigideira e frite, como panquecas.</Text>
-                                <Text style = {[estiloRecipe.txt]}>6.Se você coloca uma quantidade espessa, use uma tampa na frigideira para que cozinhe mais rápido. Tenha paciência, ela demora mais do que os omeletes normais para que fique dourado ou crocante.</Text>
-                                <Text style = {[estiloRecipe.txt]}>7.Verifique pelas bordas antes de virar a massa, se elas já puderem se desgrudar da frigideira, então vire delicadamente a massa e, caso necessário, passe a espátula em baixo da massa para ter certeza de que ela não grudou; se o meio ainda estiver mole, ela quebra.</Text>
-                                <Text style = {[estiloRecipe.txt]}>8.Então controle bem o fogo para que as bordas não queimem e o meio mais espesso fique cru.</Text>
-                                <Text style = {[estiloRecipe.txt]}>9.Pode ser servido puro ou com o recheio que preferir</Text>
+                                <Text style = {[estiloRecipe.txt]}>6. Se você coloca uma quantidade espessa, use uma tampa na frigideira para que cozinhe mais rápido. Tenha paciência, ela demora mais do que os omeletes normais para que fique dourado ou crocante.</Text>
+                                <Text style = {[estiloRecipe.txt]}>7. Verifique pelas bordas antes de virar a massa, se elas já puderem se desgrudar da frigideira, então vire delicadamente a massa e, caso necessário, passe a espátula em baixo da massa para ter certeza de que ela não grudou; se o meio ainda estiver mole, ela quebra.</Text>
+                                <Text style = {[estiloRecipe.txt]}>8. Então controle bem o fogo para que as bordas não queimem e o meio mais espesso fique cru.</Text>
+                                <Text style = {[estiloRecipe.txt]}>9. Pode ser servido puro ou com o recheio que preferir</Text>
                                 
                             </>
                         </View>

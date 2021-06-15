@@ -43,7 +43,7 @@ export default ({navigation}) => {
                                 
                                 {/* Estilizar texto de forma não manual */}
                                 
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}> 3 xícaras (chá) de farinha de trigo </Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>3 xícaras (chá) de farinha de trigo </Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 e 1/2 xícara (chá) água morna (cuidado para não ficar meio fria a água)</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>3 colheres (sopa) de óleo vegetal</Text></Unorderedlist>
                                 <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres (sopa) cheias de cachaça (ou 2 de vinagre)</Text></Unorderedlist>

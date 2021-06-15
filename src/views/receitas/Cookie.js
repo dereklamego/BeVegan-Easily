@@ -58,7 +58,8 @@ export default ({navigation}) => {
                                 <Text style = {[estiloRecipe.txt]}>2. Acrescente a farinha de trigo e o fermento, misture bem.</Text>
                                 <Text style = {[estiloRecipe.txt]}>3. Por último, adicione o chocolate amargo e misture.</Text>
                                 <Text style = {[estiloRecipe.txt]}>4. Molde os cookies e coloque-os em uma forma.</Text>
-                                <Text style = {[estiloRecipe.txt]}>5.Deixe na geladeira por 20 minutos</Text>
+                                <Text style = {[estiloRecipe.txt]}>5. Deixe na geladeira por 20 minutos</Text>
+                                <Text style = {[estiloRecipe.txt]}>6. Em seguida, leve ao forno preaquecido (200° C) por cerca de 20 minutos.</Text>
                                 
                                 
 

@@ -65,7 +65,7 @@ export default ({navigation}) => {
                                 <Text style = {[estiloRecipe.txt]}>7.Usando uma colher cheia como medida, faça o formato de um nugget com a massa - se preferir, recheie a massa e empane em farinha de trigo.</Text>
                                 <Text style = {[estiloRecipe.txt]}>8.Disponha numa assadeira e leve para o forno preaquecido a 180º C por 1 hora ou até que estejam completamente dourados</Text>
                                 <Text style = {[estiloRecipe.txt]}>9.Vire na metade do tempo para dourar dos 2 lados por igual ou frite em óleo bem quente.</Text>
-                                <Text style = {[estiloRecipe.txt]}>9.Espere esfriar completamente antes de consumir.</Text>
+                                <Text style = {[estiloRecipe.txt]}>10.Espere esfriar completamente antes de consumir.</Text>
                             </>
                         </View>
                             <View style={[Estilo.BtnContainer]}>

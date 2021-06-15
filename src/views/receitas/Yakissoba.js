@@ -71,8 +71,8 @@ export default ({navigation}) => {
 
                                 <Text style = {[estiloRecipe.subtTitles]}>Molho de Soja:</Text>
 
-                                <Text style = {[estiloRecipe.txt]}>1. Dissolva o amido de milho em uma xícara de água e acrescente uma xícara (chá) de shoyu.</Text>
-                                <Text style = {[estiloRecipe.txt]}>2. Leve ao fogo até engrossar o molho, mexendo sempre.</Text>
+                                <Text style = {[estiloRecipe.txt]}>6. Dissolva o amido de milho em uma xícara de água e acrescente uma xícara (chá) de shoyu.</Text>
+                                <Text style = {[estiloRecipe.txt]}>7. Leve ao fogo até engrossar o molho, mexendo sempre.</Text>
                                 <Text style = {[estiloRecipe.txt]}>8. Misture os legumes com macarrão e acrescente delicadamente o molho de shoyu.</Text>
                                 <Text style = {[estiloRecipe.txt]}>9. Misture devagar e finalize com a cebolinha.</Text>
 
