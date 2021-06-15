@@ -19,6 +19,10 @@ import Pastel from '../views/receitas/Pastel'
 import EmpadaoV from '../views/receitas/EmpadaoV'
 import BolinhoDeArroz from '../views/receitas/BolinhoDeArroz'
 import Yakissoba from '../views/receitas/Yakissoba'
+import Cookie from '../views/receitas/Cookie'
+import Omelete from '../views/receitas/Omelete'
+import Nuggets from '../views/receitas/Nuggets'
+import Lasanha from '../views/receitas/Lasanha'
 const Stack = createStackNavigator()
 
 export default props => (
@@ -44,6 +48,10 @@ export default props => (
             <Stack.Screen name='EmpadaoV' component={EmpadaoV} />
             <Stack.Screen name='BolinhoDeArroz' component={BolinhoDeArroz} />
             <Stack.Screen name='Yakissoba' component={Yakissoba} />
+            <Stack.Screen name='Cookie' component={Cookie} />
+            <Stack.Screen name='Omelete' component={Omelete} />
+            <Stack.Screen name='Nuggets' component={Nuggets} />
+            <Stack.Screen name='Lasanha' component={Lasanha} />
         </Stack.Navigator> 
     </SafeAreaView>    
     

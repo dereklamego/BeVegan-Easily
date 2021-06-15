@@ -32,23 +32,23 @@ const receitas = [
     },
     {
         id: 7,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Cookie Vegano',
+        src: 'Cookie'
     },
     {
         id: 8,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Omelete Vegano',
+        src: 'Omelete'
     },
     {
         id: 9,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Nuggets de Milho Vegano',
+        src: 'Nuggets'
     },
     {
         id: 10,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Lasanha Vegana',
+        src: 'Lasanha'
     },
 
 
