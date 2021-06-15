@@ -28,11 +28,11 @@ export default ({ navigation }) => {
                 {/* </View> */}
                 <View style={[EstiloLocal.textContainer]}>
                     <Text style={[EstiloLocal.firstTitle]}>
-                        Um fácil início 
+                        Um fácil início
                     </Text>
                     <Text style={[EstiloLocal.txt]}>
-                       Não deixe de ver essas importantíssimas dicas que separamos para você e irão te ajudar na mudança de seu estilo de vida:
-                    </Text> 
+                        Não deixe de ver essas importantíssimas dicas que separamos para você e irão te ajudar na mudança de seu estilo de vida:
+                    </Text>
 
                     <Text style={[EstiloLocal.txtTitle]}>
                         1. PROCURE UM NUTRICIONISTA
@@ -66,7 +66,7 @@ export default ({ navigation }) => {
 
                     <Text style={[EstiloLocal.txt]}>
                         Infelizmente, a oferta de alimentos veganos ainda está aquém da demanda, e por isso, pode ser mais ou menos difícil se alimentar fora de casa, dependendo do local onde estiver.
-                        
+
                     </Text>
 
                     <Text style={[EstiloLocal.txt]}>
@@ -78,27 +78,33 @@ export default ({ navigation }) => {
                     </Text>
 
                     <Text style={[EstiloLocal.txtTitle]}>
-                        5. BUSQUE POR FEIRAS VEGANAS
-                        </Text>
-                    <Text style={[EstiloLocal.txt]}>
-                        ....
+                        5. COMECE ADICIONANDO!
                     </Text>
                     <Text style={[EstiloLocal.txt]}>
-
+                        Para começar ser vegano, não corte de uma vez todos os alimentos que você está acostumado a comer.
+                        Ao invés disso, comece adicionando alimentos novos que futuramente substituirão os alimentos que você consome hoje.
+                        Por exemplo, comece a misturar o arroz com “carne de soja”, tofu etc.
+                    </Text>
+                    <Text style={[EstiloLocal.txtTitle]}>
+                       6. MANTENHA-SE SAUDÁVEL
                     </Text>
                     <Text style={[EstiloLocal.txt]}>
-
+                        Há um equívoco no pensamento de muitas pessoas que associam a dieta vegana à alimentação saudável.
+                        Mas não necessariamente é verdade. Batata frita, por exemplo, é uma comida vegana, pois não possui origem animal, no entanto não é saudável.
+                        Salgadinhos, refrigerantes e guloseimas também podem ser veganos.
+                        Por isso, tente se manter saudável, comendo alimentos frescos extraídos da natureza.
                     </Text>
 
-                    <Text style={[EstiloLocal.subtTitles]}>
-
+                    <Text style={[EstiloLocal.txtTitle]}>
+                       7. FAÇA UMA LISTA!
                     </Text>
 
                     <Text style={[EstiloLocal.txt]}>
-
+                        Quando tiver tempo, sente-se e faça uma lista de produtos que você utiliza no seu dia-a-dia que são de origem animal (ou testados em animais).
+                        Assim que fizer isso, procure saber a viabilidade de substituição desses produtos por produtos veganos.
                     </Text>
-                    <Text style={[EstiloLocal.txt]}>
-
+                    <Text style={[EstiloLocal.txtTitle]}>
+                        8.
                     </Text>
                     <Text style={[EstiloLocal.txt]}>
 
@@ -134,7 +140,7 @@ const EstiloLocal = StyleSheet.create({
         marginBottom: 10,
         marginLeft: 10
     },
-    firstTitle:{
+    firstTitle: {
         fontSize: 22,
         fontWeight: "bold",
         color: '#544F1F',
