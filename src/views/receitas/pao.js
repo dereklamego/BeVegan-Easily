@@ -5,7 +5,7 @@ import { Text, View, TouchableOpacity, SafeAreaView, Image, StyleSheet,ScrollVie
 import Unorderedlist from 'react-native-unordered-list';
 import estiloRecipe from '../../components/estiloRecipe';
 import {Modalize} from 'react-native-modalize';
-import YoutubePlayer from 'react-native-youtube-iframe';
+import {DataTable} from 'react-native-paper';
 
 export default ({navigation}) => {
 
@@ -95,6 +95,57 @@ export default ({navigation}) => {
                          <Text style = {[estiloRecipe.txtTitles]}>Tabela Nutricional</Text>
                          </>
 
+                         <ScrollView style = {[estiloRecipe.SViewT]} showsVerticalScrollIndicator={false}>
+                         <DataTable style={{flex:1}}>
+                             <DataTable.Header>
+                                 <DataTable.Title>PORÇÃO 12 G</DataTable.Title>
+                                 <DataTable.Title numeric>Quantidade</DataTable.Title>
+                                 <DataTable.Title numeric>%VD</DataTable.Title>
+                             </DataTable.Header>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Calorias</DataTable.Cell>
+                                 <DataTable.Cell numeric>22,58 Kcal</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Carboidratos</DataTable.Cell>
+                                 <DataTable.Cell numeric>3,81 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Proteínas</DataTable.Cell>
+                                 <DataTable.Cell numeric>0,13 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Gorduras totais</DataTable.Cell>
+                                 <DataTable.Cell numeric>0,75 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Gorduras Saturadas</DataTable.Cell>
+                                 <DataTable.Cell numeric>0,7 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Gorduras trans</DataTable.Cell>
+                                 <DataTable.Cell numeric>Zero G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Fibras alimentares</DataTable.Cell>
+                                 <DataTable.Cell numeric>0,16 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                             <DataTable.Row>
+                                 <DataTable.Cell>Sódio</DataTable.Cell>
+                                 <DataTable.Cell numeric>0,94 G</DataTable.Cell>
+                                 <DataTable.Cell numeric>**</DataTable.Cell>
+                             </DataTable.Row>
+                         </DataTable>
+
+                         <Text>** VD não estabelecido</Text>
+                         </ScrollView>
                     </View>
                 </Modalize>
                     

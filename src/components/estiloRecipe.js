@@ -102,6 +102,10 @@ export default StyleSheet.create({
       },
 
     SView:{
+        height: '90%',
+        
+    },
+    SViewT:{
         height: '100%',
         
     },
