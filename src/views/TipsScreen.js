@@ -14,7 +14,8 @@ export default ({ navigation }) => {
                     <Text style={[Estilo.txtBack, { textDecorationLine: 'underline' }]}>Voltar</Text>
                 </TouchableOpacity>
                 <View style={[Estilo.HeadAlign]}>
-                    <Text style={Estilo.TextHead}> DICAS</Text>
+                    <Text style={Estilo.TextHead}>  
+                    DICAS</Text>
                 </View>
             </View>
             <ScrollView style={[Estilo.heightScroll]} showsVerticalScrollIndicator={false} >
@@ -103,14 +104,7 @@ export default ({ navigation }) => {
                         Quando tiver tempo, sente-se e faça uma lista de produtos que você utiliza no seu dia-a-dia que são de origem animal (ou testados em animais).
                         Assim que fizer isso, procure saber a viabilidade de substituição desses produtos por produtos veganos.
                     </Text>
-                    <Text style={[EstiloLocal.txtTitle]}>
-                        8.
-                    </Text>
-                    <Text style={[EstiloLocal.txt]}>
-
-                    </Text>
-
-
+                    
                 </View>
             </ScrollView>
             {/*Footer da  pagina */}
