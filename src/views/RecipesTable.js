@@ -2,18 +2,18 @@ import React from 'react'
 const receitas = [
     {
         id: 1,
-        title: 'pao',
+        title: 'Pão de queijo Vegano',
         src:'pao'
     },
     {   
         id: 2,
-        title: 'Macarrão',
-        src:'macarrao'
+        title: 'Mousse de Chocolate Vegano',
+        src:'Mousse'
     },
     {
         id: 3,
-        title: 'Grão',
-        src: 'grao'
+        title: 'Pastel Vegano',
+        src: 'Pastel'
     },
     {
         id: 4,
@@ -22,13 +22,13 @@ const receitas = [
     },
     {
         id: 5,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Bolinho de Arroz',
+        src: 'BolinhoDeArroz'
     },
     {
         id: 6,
-        title: 'Empadão Vegano',
-        src: 'pao'
+        title: 'Yakissoba Vegano',
+        src: 'Yakissoba'
     },
     {
         id: 7,

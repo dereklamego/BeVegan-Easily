@@ -14,10 +14,11 @@ import EnviromentalImpactsScreen from '../views/EnviromentalImpactsScreen'
 
 import {SafeAreaView,Text} from 'react-native'
 import pao from '../views/receitas/pao'
-import macarrao from '../views/receitas/macarrao'
-import grao from '../views/receitas/grao'
+import Mousse from '../views/receitas/Mousse'
+import Pastel from '../views/receitas/Pastel'
 import EmpadaoV from '../views/receitas/EmpadaoV'
-
+import BolinhoDeArroz from '../views/receitas/BolinhoDeArroz'
+import Yakissoba from '../views/receitas/Yakissoba'
 const Stack = createStackNavigator()
 
 export default props => (
@@ -38,9 +39,11 @@ export default props => (
         
 
             <Stack.Screen name='pao' component={pao}/>
-            <Stack.Screen name='macarrao' component={macarrao}/>
-            <Stack.Screen name='grao' component ={grao} />
+            <Stack.Screen name='Mousse' component={Mousse}/>
+            <Stack.Screen name='Pastel' component ={Pastel} />
             <Stack.Screen name='EmpadaoV' component={EmpadaoV} />
+            <Stack.Screen name='BolinhoDeArroz' component={BolinhoDeArroz} />
+            <Stack.Screen name='Yakissoba' component={Yakissoba} />
         </Stack.Navigator> 
     </SafeAreaView>    
     

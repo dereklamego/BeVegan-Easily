@@ -24,7 +24,7 @@ export default ({navigation}) => {
                     <Text  style={[Estilo.txtBack,{textDecorationLine: 'underline'}] }>Voltar</Text>                        
                 </TouchableOpacity> 
                 <View style={[Estilo.HeadAlign]}>
-                        <Text style={[Estilo.TextHead,{textAlign:'center'}]}>Pão de Queijo Vegano</Text>
+                        <Text style={[Estilo.TextHead,{textAlign:'center'}]}>Mousse Vegano</Text>
                 </View>
             </View>
              <View > 
@@ -32,41 +32,28 @@ export default ({navigation}) => {
 
                 <ScrollView style = {[estiloRecipe.SView]} showsVerticalScrollIndicator={false}>
                      
-                    <Image source={require('../../img/imgRecipe/paoqueijo.jpg')} style={[estiloRecipe.img]}/>
+                    <Image source={require('../../img/imgRecipe/moussevegano.jpeg')} style={[estiloRecipe.img]}/>
                     
                     <View style={[estiloRecipe.textContainer]}>
                         <Text style = {[estiloRecipe.txtTitles]}>INGREDIENTES</Text> 
 
                         <View>
                             <>
-                                <Text style = {[estiloRecipe.subtTitles]}>Massa</Text>
+                                
                                 
                                 {/* Estilizar texto de forma não manual */}
                                 
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]} >2 xícaras de polvilho doce</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1/3 xícara de óleo</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 xícara de polvilho azedo</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 xícaras de batata salsa amassada (tipo purê)</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 xícara de água quente</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>sal a gosto</Text></Unorderedlist>
-                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>temperos a gosto (salsinha desidratada, ervas finas, alho desidratado, gergelim, linhaça)</Text></Unorderedlist>
-                                
-                                
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}> 1 abacate maduro </Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>2 colheres (sopa) de cacau em pó</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 pitada de canela em pó</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>4 colheres (sopa) de melado de cana</Text></Unorderedlist>
+                                <Unorderedlist><Text style = {[estiloRecipe.txt]}>1 colher (chá) de essência de baunilha</Text></Unorderedlist>
+
 
                                 <Text style = {[estiloRecipe.txtTitles]}>MODO DE PREPARO</Text>
-                                <Text style = {[estiloRecipe.txt]}>1. Cozinhar em água fervente, a batata salsa já descascada.</Text>
-                                <Text style = {[estiloRecipe.txt]}>2. Reservar a água utilizada após o fervimento</Text>
-                                <Text style = {[estiloRecipe.txt]}>3. Amassar as batatas, até a consistência de um purê.</Text>
-                                <Text style = {[estiloRecipe.txt]}>4. Em uma travessa, adicionar o polvilho azedo, o polvilho doce, o óleo, o sal e a água quente do fervimento das batatas.</Text>
-                                <Text style = {[estiloRecipe.txt]}>5. Misturar bem, podendo utilizar as próprias mãos, até virar uma massa uniforme..</Text>
-                                <Text style = {[estiloRecipe.txt]}>6.Acrescentar os temperos que preferir.</Text>
-                                <Text style = {[estiloRecipe.txt]}>7. Pode separar a massa em pedaços e acrescentar temperos diferentes para cada pedaço.</Text>
-                                <Text style = {[estiloRecipe.txt]}>8. Fazer bolinhas, de preferência pequenas, e coloque em uma assadeira antiaderente com espaço entre uma bolinha e outra, pois quase duplica de tamanho</Text>
-                                <Text style = {[estiloRecipe.txt]}>9. Em forno preaquecido a 180°C, colocar seus pães de queijo veganos por aproximadamente 20 minutos, ou quanto achar necessário.
-                                </Text>
+                                <Text style = {[estiloRecipe.txt]}>1. No liquidificador, adicione o abacate, o cacau, a canela, o melado e a essência de baunilha.</Text>
+                                <Text style = {[estiloRecipe.txt]}>2. Bata bem e leve à geladeira por 2 horas.</Text>
                                 
-
-                            
                             </>
                         </View>
                             <View style={[Estilo.BtnContainer]}>
