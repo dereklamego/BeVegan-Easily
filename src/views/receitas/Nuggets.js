@@ -6,7 +6,7 @@ import Unorderedlist from 'react-native-unordered-list';
 import estiloRecipe from '../../components/estiloRecipe';
 import {Modalize} from 'react-native-modalize';
 import {DataTable} from 'react-native-paper';
-
+import { MaterialCommunityIcons, Feather } from '@expo/vector-icons';
 
 export default ({navigation}) => {
 
@@ -149,7 +149,11 @@ export default ({navigation}) => {
                 </Modalize>
                     
              </View> 
-            <View style={Estilo.BottomColor}></View>
+            <View style={Estilo.BottomColor}>
+                <MaterialCommunityIcons name="heart" size={30} color="white" />
+                <Feather name="search" size={30} color="white" />
+                <Feather name="user" size={30} color="white" />
+            </View>
             </SafeAreaView>
     )
 }

@@ -67,7 +67,7 @@ export default ({navigation}) => {
                         </Text>
                         <Text style={[EstiloLocal.txt, EstiloLocal.subsubTitle]}>Emissão de gases  </Text>
                         <Text style={[EstiloLocal.txt]}>
-                            No brasil, a agropecuária emitiu 598,7 milhões de toneladas de CO2 e em 2019, um aumento de 1,1% em relação às 592,3 milhões de toneladas emitidas em 2018. As emissões diretas do setor, fortemente ligadas ao rebanho bovino, representaram 28% do total de gases de efeito estufa do Brasil. As emissões de uso da terra representaram 44% do total nacional. Somados, os dois setores concentram 72% das emissões brasileiras.
+                            No Brasil, a agropecuária emitiu 598,7 milhões de toneladas de CO2 e em 2019, um aumento de 1,1% em relação às 592,3 milhões de toneladas emitidas em 2018. As emissões diretas do setor, fortemente ligadas ao rebanho bovino, representaram 28% do total de gases de efeito estufa do Brasil. As emissões de uso da terra representaram 44% do total nacional. Somados, os dois setores concentram 72% das emissões brasileiras.
                         </Text>
                         <Text style={[EstiloLocal.txt]}>
                         Durante a digestão, bois e vacas produzem muito metano, um gás que contribui com 23% do efeito estufa e é 21 vezes mais ativo que o gás carbônico na retenção dos raios solares que aquecem o globo. No Brasil, os rebanhos de bovinos e outros ruminantes são responsáveis por 90% do metano gerado no país – no mundo, esse índice cai para 28%. 
